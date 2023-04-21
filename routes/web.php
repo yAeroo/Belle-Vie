@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,7 @@ Route::get('/', function () {
 Route::get('index', function () {
     return view('index');
 });
+
+//| Definiendo|La ruta en| El controller asignado| El nombre|   Apodo interno
+//| el método| que actua| ejecuta una función   |de la función|  para la misma ruta
+   Route::get('/login', [LoginController::class, 'index'])->name('login');
