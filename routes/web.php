@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +26,4 @@ Route::get('index', function () {
 
 //| Definiendo|La ruta en| El controller asignado| El nombre|   Apodo interno
 //| el método| que actua| ejecuta una función   |de la función|  para la misma ruta
-   Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
