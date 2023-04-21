@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RegisterController extends Controller
+class IndexController extends Controller
 {
     public function index(){
-        return view('auth.register');
+        return view('index');
     }
 }
