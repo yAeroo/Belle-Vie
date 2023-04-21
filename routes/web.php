@@ -27,3 +27,10 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+
+//|Ruta al  Profile
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+
+//Ruta del Profile hacia el settings
+Route::get('/profile/settings',  [SettingsController::class, 'index'])->name('profile.settings');
