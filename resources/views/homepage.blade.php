@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <h1 class="font-bold text-12">
+    <h1 class="font-bold text-3xl rounded-md">
         Hola negros
     </h1>
 </body>
