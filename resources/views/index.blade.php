@@ -65,7 +65,7 @@
             </div>
             <div class="p-8">
                 <div class="uppercase tracking-wide text-sm  text-[#050505]  font-semibold">Rancho en Lomas Altas</div>
-                <p class="mt-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
+                <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
                 <button type="button" class="bg-[#E95F4A] text-white p-2 rounded-lg  hover:bg-white hover:text-black  hover:border-gray-300 ">Información</button>
             </div>
             
@@ -81,7 +81,7 @@
             </div>
             <div class="p-8">
                 <div class="uppercase tracking-wide text-sm text-[#050505] font-semibold">Rancho En Soyapango</div>
-                    <p class="mt-2 text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptate architecto nesciunt quo praesentium fuga molestias sint, et consectetur quod accusamus cumque harum placeat rem quia at, distinctio mollitia reprehenderit!</p>
+                    <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptate architecto nesciunt quo praesentium fuga molestias sint, et consectetur quod accusamus cumque harum placeat rem quia at, distinctio mollitia reprehenderit!</p>
                     <button type="button" class="bg-[#E95F4A] text-white p-2 rounded-lg  hover:bg-white hover:text-black  hover:border-gray-300 ">Información</button>
             </div>
         </div>
