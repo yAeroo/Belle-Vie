@@ -8,6 +8,8 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+    <x-navbar></x-navbar>
+    
     <h1 class="font-bold text-3xl rounded-md">
         Hola soy Belle Vie
     </h1>
