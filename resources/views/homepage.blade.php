@@ -26,7 +26,7 @@
 <body class="font-[Poppins] h-screen">
     <x-navbarAuth></x-navbarAuth>
 
-    <section class='bg-gradient-to-r from-purple-700 to-blue-500 bg-Hero bg-cover bg-center h-screen py-4 md:px-24 px-4'>
+    <section class="bg-[url('../../../public/img/slider.jpg')] bg-cover bg-center h-screen py-4 md:px-24 px-4">
     
         
             <div class='flex md:flex-row flex-col gap-5 pt-20'>
