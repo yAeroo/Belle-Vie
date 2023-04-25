@@ -23,8 +23,14 @@ use App\Http\Controllers\SettingsController;
 Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 
 // --=== Inicio de sesión y registro ===--
-Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register/store', [RegisterController::class, 'store'])->name('register.store');
+Route::get('/registerTest', [RegisterController::class, 'index2'])->name('register.test');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/loginTest', [LoginController::class, 'index2'])->name('login.test');
+Route::post('/login/store', [LoginController::class, 'store'])->name('login.store');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // --=== Página de Inicio ===--
 Route::get('/index', [IndexController::class, 'index'])->name('index');

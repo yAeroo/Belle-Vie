@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="font-bold text-3xl rounded-md">
-        Hola negros
+        Hola soy Belle Vie
     </h1>
     <img src="{{ url('img/favicon.png') }}">
 </body>

@@ -168,7 +168,7 @@
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="text-sm text-[#050505]  sm:text-centertext-[#050505] ">
-                    © 2023{" "}
+                    © 2023{" <a href="{{ route('logout') }}"> Cerrar sesión </a> "}
                     <Link to="#" class="hover:underline">
                         Belle-Vie™
                     </Link>

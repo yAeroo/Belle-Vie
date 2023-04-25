@@ -1,5 +1,5 @@
 {{-- ¡OBLIGATORIO! @extends manda a llamar a la plantilla y @section title añade el título que estara presente en la vista --}}
-@extends('layout.AppLayout') @section('title') Perfil @endsection
+@extends('layout.AppLayout') @section('title') {{ Auth()->user()->username }} @endsection
 
 {{-- Opcionales: Se añaden CSS o JS dedicados a esas vistas en específico --}}
 @section('css') @vite('resources/css/SOY UN EJEMPLO.css')  @endsection
