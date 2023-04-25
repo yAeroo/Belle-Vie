@@ -7,11 +7,11 @@
     <title>Profile Settins</title>
     @vite('resources/css/app.css')
 </head>
-<body class=" h-screen"> 
+<body class=" h-screen  bg-[#ECF0F1]"> 
 
 
     <section id="profile settings" class="min-h-screen bg-[url('img/banner.jpg')] bg-cover flex items-end justify-center pt-40 ">
-    <article id="profile-info" class=" bg-[#e95f4a] h-[80vh] sm:w-10/12 w-full sm:rounded-t-3xl p-5 shadow-black shadow-lg transition-all flex flex-col">
+    <article id="profile-info" class=" bg-[#e95f4a] h-[85vh] sm:w-10/12 w-full sm:rounded-t-3xl p-5 shadow-black shadow-lg transition-all flex flex-col">
         <div id="profile-pic" class="w-full flex justify-center" >
 
             <img
@@ -29,7 +29,7 @@
         <div>
             <label for="address" class="text-white font-semibold">Username</label>
             <input
-              class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-teal-400"
+              class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-teal-400 "
               type="text"
               name="username"    
               id="username"
@@ -67,7 +67,7 @@
             />
            </div>
            <br>
-           <button class="bg-[#8661c1] hover:bg-[#9d6bec] text-white font-bold py-2 px-4 rounded-full bottom-0 right-0">
+           <button class="bg-[#8661c1] hover:bg-[#9d6bec] text-white font-bold py-2 px-4 rounded-full bottom-0 right-0 relative">
             Enviar
           </button>
     </form>
