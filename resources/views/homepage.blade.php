@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perú</title>
+    <title>Homepage</title>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     @vite('resources/css/app.css')
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
@@ -26,10 +26,10 @@
 <body class="font-[Poppins] h-screen">
     <x-navbarAuth></x-navbarAuth>
 
-    <section class="bg-[url('../../../public/img/slider.jpg')] bg-cover bg-center h-screen py-4 md:px-24 px-4">
+    <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')]  bg-cover bg-center h-screen py-4 md:px-24 px-4">
     
         
-            <div class='flex md:flex-row flex-col gap-5 pt-20'>
+            <div class='flex md:flex-row flex-col gap-5 pt-20 text-align-center'>
                 <div class='flex-1'>
                     <h1 class='text-base md:text-5xl text-white font-semibold tracking-wide md:leading-tight 
                     leading-snug'>Alquila propiedades de manera fácil y sencilla.</h1>
@@ -44,9 +44,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class='flex-1 flex justify-center py-1'>
+                {{-- <div class='flex-1 flex justify-center py-1'>
                     <img src={{asset("/img/Rancho2.jpg")}} alt="hero" class='h-3/5'/>
-                </div>
+                </div> --}}
             </div>
         </section>
 
