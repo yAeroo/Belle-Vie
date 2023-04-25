@@ -8,9 +8,9 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-[#ECF0F1]">
-    <nav></nav>
+<x-navbar></x-navbar>
 
-    <div class="relative object-center max-w-2xl mx-auto">
+    <div class="py-8 relative object-center max-w-2xl mx-auto">
         <div class="overflow-x-auto whitespace-nowrap">
           <div class="inline-block px-4">
             <img src="{{ asset('img/Rancho2.jpg') }}" class="" alt="">
