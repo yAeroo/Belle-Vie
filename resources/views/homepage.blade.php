@@ -24,7 +24,7 @@
 
 </head>
 <body class="font-[Poppins] h-screen">
-    <x-navbar></x-navbar>
+    <x-navbarAuth></x-navbarAuth>
 
     <section class='bg-gradient-to-r from-purple-700 to-blue-500 bg-Hero bg-cover bg-center h-screen py-4 md:px-24 px-4'>
     
