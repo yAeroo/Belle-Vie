@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -11,7 +12,11 @@ class IndexController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
-        return view('index');
+    public function index(User $user){
+        $user = Auth()->user();
+
+        return view('index',[
+            'user' => $user
+        ]);
     }
 }

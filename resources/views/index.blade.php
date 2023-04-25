@@ -10,6 +10,8 @@
 <body class="bg-[#ECF0F1]">
 <x-navbar></x-navbar>
 
+<a href="{{ route('profile', $user) }}">Hola</a>
+
     <div class="py-8 relative object-center max-w-2xl mx-auto">
         <div class="overflow-x-auto whitespace-nowrap">
           <div class="inline-block px-4">

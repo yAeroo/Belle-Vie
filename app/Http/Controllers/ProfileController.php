@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -11,7 +12,11 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
-        return view('profile');
+    public function index(User $user){
+        
+        return view('profile',[
+            'user' => $user,
+            'user_fn' => $user->name." ".$user->last_name
+        ]);
     }
 }
