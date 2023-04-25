@@ -26,23 +26,34 @@
 <body class="font-[Poppins] h-screen">
     <x-navbarAuth></x-navbarAuth>
 
-    <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')]  bg-cover bg-center h-screen py-4 md:px-24 px-4">
+    <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')] bg-cover bg-center h-screen py-4 md:px-24 px-4 content-center text-center">
     
         
-            <div class='flex md:flex-row flex-col gap-5 pt-20 text-align-center'>
+            <div class='flex md:flex-row flex-col gap-5 my-14 justify-items-center'>
                 <div class='flex-1'>
-                    <h1 class='text-base md:text-5xl text-white font-semibold tracking-wide md:leading-tight 
+                    <br>
+                    <h1 class='text-5xl text-white font-semibold tracking-wide md:leading-tight 
                     leading-snug'>Alquila propiedades de manera fácil y sencilla.</h1>
-                    <p class='text-terc text-white font-semibold md:w-2/3 md:py-4 py-2 my-5 leading-relaxed'>
+                    <br>
+                    <p class='text-white text-2xl md:py-4 py-2 my-5 leading-relaxed text-center'>
                         Belle-Vie, el alquiler como nunca antes.
                     </p>
-                    <br />
-                    <div class='flex md:gap-4 gap-2 flex-wrap'>
+                    
+                    <div class="flex flex-col items-center justify-center h-screen">
                         <ul class="flex gap-6">
-                            <li> <a href=""><button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Inicia Sesión</button></a> </li>
-                            <li> <a href=""><button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Registrate</button></a> </li>
+                          <li>
+                            <a href="">
+                              <button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Inicia Sesión</button>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Registrate</button>
+                            </a>
+                          </li>
                         </ul>
-                    </div>
+                      </div>
+                      
                 </div>
                 {{-- <div class='flex-1 flex justify-center py-1'>
                     <img src={{asset("/img/Rancho2.jpg")}} alt="hero" class='h-3/5'/>
