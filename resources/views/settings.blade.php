@@ -7,64 +7,72 @@
     <title>Profile Settins</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-[#ECF0F1]"> 
-    <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-bold tracking-tight text-[#E95F4A] flex items-center justify-center">
-            Configuración del Perfil</h2>
-    </div>
+<body class=" h-screen"> 
 
-<div class="relative overflow-hidden   place-items-center flex justify-center ">
-<form action="" class="mt-[150px] w-96 p-6 shadow-lg rounded-md ">
-    <div class="">
 
-        <!-- Username -->
-        <div class="relative w-[320px] bg-slate-500  rounded-md m-[15px]">
+    <section id="profile settings" class="min-h-screen bg-[url('img/banner.jpg')] bg-cover flex items-end justify-center pt-40 ">
+    <article id="profile-info" class=" bg-[#e95f4a] h-[80vh] sm:w-10/12 w-full sm:rounded-t-3xl p-5 shadow-black shadow-lg transition-all flex flex-col">
+        <div id="profile-pic" class="w-full flex justify-center" >
 
-            <input type="checkbox" id="input1" class="absolute peer opacity-0">
-
-            <label for="input1" class=" text-white   font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center ">Username</label>
-                <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
-                    <input type="text" name="username" placeholder="Username" class="p-[15px] text-sm">
-                </div>
+            <img
+                src="{{ asset('img/Rancho2.jpg') }}"
+                class="-mt-28 w-52 h-52 lg:w-60 lg:h-60 rounded-full border-8 border-solid border-white transition-all"
+                alt="profile-pic">
         </div>
 
-        <!-- Nombre -->
-        <div class="relative w-[320px] bg-slate-500  rounded-md m-[15px]">
-
-            <input type="checkbox" id="input2" class="absolute peer opacity-0">
-
-            <label for="input2" class=" text-white   font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center ">Nombre</label>
-                <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
-                    <input type="text" name="nombre" placeholder="Nombre" class="p-[15px] text-sm">
-                </div>
+    <form>
+        <div>
+            <h1 class="text-4xl font-bold text-white">Account Settings</h1>
         </div>
+        <hr>
+        <br>
+        <div>
+            <label for="address" class="text-white font-semibold">Username</label>
+            <input
+              class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-teal-400"
+              type="text"
+              name="username"    
+              id="username"
+            />
+            <br><br>
+           </div>
+          <div class="flex space-x-4">
+            <div class="w-1/2">
+              <label for="firstname" class="text-white font-semibold">Nombre</label>
+              <input
+                class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-teal-400"
+                type="text"
+                name="firstname"
+                id="firstname"
+              />
+            </div>
+            <div class="w-1/2">
+              <label for="lastname" class="text-white font-semibold">Apellido</label>
+              <input
+                class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-teal-400"
+                type="text"
+                name="lastname"
+                id="lastname"
+              />
+            </div>
+          </div>
+          <br><br>
+          <div>
+            <label for="address" class="text-white font-semibold">Contraseña</label>
+            <input
+              class="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-teal-400"
+              type="password"
+              name="password"    
+              id="password"
+            />
+           </div>
+           <br>
+           <button class="bg-[#8661c1] hover:bg-[#9d6bec] text-white font-bold py-2 px-4 rounded-full bottom-0 right-0">
+            Enviar
+          </button>
+    </form>
 
-        <!-- Apellido -->
-        <div class="relative w-[320px] bg-slate-500  rounded-md m-[15px]">
-
-            <input type="checkbox" id="input3" class="absolute peer opacity-0">
-
-            <label for="input3" class=" text-white   font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center ">Apellido</label>
-                <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
-                    <input type="text" name="apellido" placeholder="Apellido" class="p-[15px] text-sm">
-                </div>
-        </div>
-
-        <!-- Contraseña -->       
-        <div class="relative w-[320px] bg-slate-500  rounded-md m-[15px]">
-
-            <input type="checkbox" id="input4" class="absolute peer opacity-0">
-
-            <label for="input4" class=" text-white   font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center ">Contraseña</label>
-                <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
-                    <input type="password" name="contraseña" placeholder="Contraseña" class="p-[20px] text-sm">
-                </div>
-        </div>     
-    </div>
-</form>
-</div>
-
-
-
+    </article>
+</section>
 </body>
 </html>
