@@ -10,21 +10,17 @@
 <body class="bg-[#ECF0F1]">
     <nav></nav>
 
-
-<!-- This is an example component -->
 <div class="max-w-2xl mx-auto">
-
 	<div id="default-carousel" class="relative" data-carousel="static">
         <!-- Carousel wrapper -->
         <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
                 <img src="{{ asset('img/Rancho2.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('img/slider.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                <img src="{{ asset('img/Rancho1.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -104,7 +100,7 @@
                 <div class="mb-6 md:mb-0">
                     <Link to="#" class="flex items-center">
                         <img
-                            src="\public\favicon_green.ico"
+                            src="{{ asset('img/favicon.png') }}"
                             class="h-11 mr-3"
                             alt="Belle-Vie"
                         />
