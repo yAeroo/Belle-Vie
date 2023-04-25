@@ -36,5 +36,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/index', [IndexController::class, 'index'])->name('index');
 
 // --=== Perfil de usuario ===--
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::get('/profile/{user:username}', [ProfileController::class, 'index'])->name('profile');
 Route::get('/profile/settings',  [SettingsController::class, 'index'])->name('profile.settings'); // <=== Ajustes de perfil

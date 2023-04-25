@@ -24,38 +24,31 @@
 
 </head>
 <body class="font-[Poppins] h-screen">
-    <header class="bg-[#f87171]">
-        <nav class="flex justify-between items-center w-[92%] mx-auto">
-            <div>
-                <a href="/">
-                    <img class="w-16 cursor-pointer mx-2 my-2" src="img/favicon.png" alt="...">
-                </a>
+    <x-navbarAuth></x-navbarAuth>
+
+    <section class="bg-[url('../../../public/img/slider.jpg')] bg-cover bg-center h-screen py-4 md:px-24 px-4">
+    
+        
+            <div class='flex md:flex-row flex-col gap-5 pt-20'>
+                <div class='flex-1'>
+                    <h1 class='text-base md:text-5xl text-white font-semibold tracking-wide md:leading-tight 
+                    leading-snug'>Alquila propiedades de manera fácil y sencilla.</h1>
+                    <p class='text-terc text-white font-semibold md:w-2/3 md:py-4 py-2 my-5 leading-relaxed'>
+                        Belle-Vie, el alquiler como nunca antes.
+                    </p>
+                    <br />
+                    <div class='flex md:gap-4 gap-2 flex-wrap'>
+                        <ul class="flex gap-6">
+                            <li> <a href=""><button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Inicia Sesión</button></a> </li>
+                            <li> <a href=""><button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Registrate</button></a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='flex-1 flex justify-center py-1'>
+                    <img src={{asset("/img/Rancho2.jpg")}} alt="hero" class='h-3/5'/>
+                </div>
             </div>
-            <div
-                class="nav-links ml-auto duration-500 md:static absolute bg-[#f87171] md:min-h-fit min-h-[15vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-gray-50">
-                    <li>
-                        <a class="hover:text-gray-200" href="#">Iniciar Sesión</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-200 " href="#">Registrarse</a>
-                    </li>
+        </section>
 
-                </ul>
-            </div>
-            <div class="flex items-center gap-6 sm:gap-[1.75rem] ">
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-            </div>
-    </header>
-
-
-
-    <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9%]')
-        }
-    </script>
 </body>
 </html>

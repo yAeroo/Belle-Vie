@@ -1,11 +1,29 @@
-<nav className='flex justify-between rounded-2xl bg-black drop-shadow-md px-9 py-6 list-none '>
-        <img src={Logo} alt="Logo" className='h-9 cursor-pointer'/>
-        <div className="md:flex hidden items-center gap-10 text-white md:my-0 my-7">
-          <NavLinks />
+<header class="bg-[#f87171]">
+    <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div>
+            <a href="/">
+                <img class="w-16 cursor-pointer mx-2 my-2" src="img/favicon.png" alt="...">
+            </a>
         </div>
-        <IoIosMenu className="md:hidden text-white text-2xl cursor-pointer my-2 list-none" onClick={handleMenuClick} />
-      </nav>
-      {showMenu && (
-        <div className="md:hidden flex flex-col items-center justify-center gap-5 py-3 my-1 text-white list-none bg-black rounded-t-lg rounded-2xl">
-          <NavLinks />
+        <div
+            class="nav-links ml-auto duration-500 md:static absolute bg-[#f87171] md:min-h-fit min-h-[15vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-gray-50">
+                <li>
+                    <a class="hover:text-gray-200" href="#">Inicio</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-200 " href="#">Propiedades</a>
+                </li>
+                <li>
+                    <a  class="hover:text-gray-200 " href="{{ route('profile', auth()->user()) }}">Perfil</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-200 " href="#">Cerrar Sesion</a>
+                </li>
+            </ul>
         </div>
+        <div class="flex items-center gap-6 sm:gap-[1.75rem] ">
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        </div>
+  </header>
+  
