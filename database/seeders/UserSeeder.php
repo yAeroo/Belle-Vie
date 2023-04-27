@@ -24,6 +24,7 @@ class UserSeeder extends Seeder
         $Aero->password = Hash::make('1234');
         $Aero->gender = 'M';
         $Aero->type = 'user';
+        $Aero->profile_pic = 'aero.jpg';
         $Aero->save();
 
         // Usuario #2
