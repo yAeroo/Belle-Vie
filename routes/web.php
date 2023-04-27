@@ -37,4 +37,4 @@ Route::get('/index', [IndexController::class, 'index'])->name('index');
 
 // --=== Perfil de usuario ===--
 Route::get('/profile/{user:username}', [ProfileController::class, 'index'])->name('profile');
-Route::get('/profile/settings',  [SettingsController::class, 'index'])->name('profile.settings'); // <=== Ajustes de perfil
+Route::get('/profile/{user:username}/config',  [SettingsController::class, 'index'])->name('profile.settings'); // <=== Ajustes de perfil

@@ -12,6 +12,10 @@ class SettingsController extends Controller
     }
 
     public function index(){ 
-        return view('settings');
+        $user =   Auth()->user();
+
+        return view('settings',[
+            'user' => $user
+        ]);
     }
 }
