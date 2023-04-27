@@ -42,15 +42,16 @@
                     <div class="flex flex-col items-center justify-center my-8">
                       <ul class="flex gap-6">
                         <li>
-                          <a href="">
+                          <a href="{{ route('login') }}">
                             <button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Inicia Sesión</button>
                           </a>
                         </li>
                         <li>
-                          <a href="">
+                          <a href="{{ route('register') }}">
                             <button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Registrate</button>
                           </a>
                         </li>
+                        
                       </ul>
                     </div>
                       

@@ -6,7 +6,7 @@
             </a>
         </div>
         <div
-            class="nav-links ml-auto duration-500 md:static absolute bg-[#f87171] md:min-h-fit min-h-[15vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+            class="nav-links ml-auto duration-500 md:static absolute bg-[#f87171] md:min-h-fit min-h-[15vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 py-5">
             <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-gray-50">
                 <li>
                     <a class="hover:text-gray-200" href="{{ route('homepage') }}">Inicio</a>
@@ -15,7 +15,8 @@
                     <a class="hover:text-gray-200 " href="#">Propiedades</a>
                 </li>
                 <li>
-                    <a  class="hover:text-gray-200 " href="{{ route('profile', auth()->user()) }}">Perfil</a>
+                    <a  class="hover:text-gray-200 " href="#">Perfil</a>
+                    {{-- {{ route('profile', auth()->user()) }} --}}
                 </li>
                 <li>
                     <a class="hover:text-gray-200 " href="{{ route('logout') }}">Cerrar Sesion</a>
@@ -26,4 +27,12 @@
             <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
         </div>
   </header>
+
+  <script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e){
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[9%]')
+    }
+  </script>
   
