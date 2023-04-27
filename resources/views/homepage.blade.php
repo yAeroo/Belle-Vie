@@ -39,7 +39,7 @@
                         Belle-Vie, el alquiler como nunca antes.
                     </p>
 
-                    <div class="flex flex-col items-center justify-center">
+                    <div class="flex flex-col items-center justify-center my-8">
                       <ul class="flex gap-6">
                         <li>
                           <a href="">
