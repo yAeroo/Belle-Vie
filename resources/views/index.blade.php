@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index</title>
     @vite('resources/css/app.css')
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#ECF0F1]">
 <x-navbar></x-navbar>

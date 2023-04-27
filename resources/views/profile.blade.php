@@ -1,7 +1,8 @@
 @extends('layout.AppLayout') @section('title') {{ Str::title($user->username) }} @endsection
 
 @section('content')
-    <section id="profile" class="min-h-screen bg-[url('../../../public/img/profile-banner.png')] bg-cover flex items-end justify-center pt-40 ">
+<x-navbar />
+    <section id="profile" class="min-h-screen bg-[url({{ asset('img/profile-banner.png') }})] bg-cover flex items-end justify-center pt-40 ">
         <article
             id="profile-info"
             class="bg-white h-[80vh] sm:w-10/12 w-full sm:rounded-t-3xl p-5 shadow-black shadow-lg transition-all flex flex-col">

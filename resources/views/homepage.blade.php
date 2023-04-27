@@ -6,13 +6,10 @@
     <title>Homepage</title>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     @vite('resources/css/app.css')
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    
 
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
 
@@ -23,7 +20,7 @@
          blck: #050505 -->
 
 </head>
-<body class="font-[Poppins] h-screen">
+<body class="font-body h-screen">
     <x-navbarAuth></x-navbarAuth>
 
     <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')] bg-cover bg-center h-screen py-4 md:px-24 px-4 content-center text-center">
@@ -36,7 +33,7 @@
                     leading-snug'>Alquila propiedades de manera fácil y sencilla.</h1>
                     <br>
                     <p class='text-white text-2xl md:py-4 py-2 my-5 leading-relaxed text-center'>
-                        Belle-Vie, el alquiler como nunca antes.
+                        Belle Vie, el alquiler como nunca antes.
                     </p>
 
                     <div class="flex flex-col items-center justify-center my-8">

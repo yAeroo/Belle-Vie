@@ -18,7 +18,6 @@
 
 </head>
 <body class="font-[Poppins] h-screen">
-    <x-navbar></x-navbar>
     <h1 class="text-bold text-5xl">
         El pepe Login
     </h1>

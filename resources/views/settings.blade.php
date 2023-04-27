@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile Settins</title>
-    @vite('resources/css/app.css')
-</head>
-<body class=" h-screen  bg-[#ECF0F1]"> 
+@extends('layout.AppLayout') @section('title') Ajustes @endsection
 
+@section('content')
+<x-navbar />
 
-    <section id="profile settings" class="min-h-screen bg-[url('img/banner.jpg')] bg-cover flex items-end justify-center pt-40 ">
+  <section id="profile settings" class="min-h-screen bg-[url('img/banner.jpg')] bg-cover flex items-end justify-center pt-40 ">
     <article id="profile-info" class=" bg-[#e95f4a] h-[85vh] sm:w-10/12 w-full sm:rounded-t-3xl p-5 shadow-black shadow-lg transition-all flex flex-col">
         <div id="profile-pic" class="w-full flex justify-center" >
 
@@ -35,7 +28,7 @@
               id="username"
             />
             <br><br>
-           </div>
+          </div>
           <div class="flex space-x-4">
             <div class="w-1/2">
               <label for="firstname" class="text-white font-semibold">Nombre</label>
@@ -65,14 +58,13 @@
               name="password"    
               id="password"
             />
-           </div>
-           <br>
-           <button class="bg-[#8661c1] hover:bg-[#9d6bec] text-white font-bold py-2 px-4 rounded-full bottom-0 right-0 relative">
+          </div>
+          <br>
+          <button class="bg-[#8661c1] hover:bg-[#9d6bec] text-white font-bold py-2 px-4 rounded-full bottom-0 right-0 relative">
             Enviar
           </button>
     </form>
 
     </article>
-</section>
-</body>
-</html>
+  </section>
+@endsection
