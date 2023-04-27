@@ -38,21 +38,21 @@
                     <p class='text-white text-2xl md:py-4 py-2 my-5 leading-relaxed text-center'>
                         Belle-Vie, el alquiler como nunca antes.
                     </p>
-                    
-                    <div class="flex flex-col items-center justify-center h-screen">
-                        <ul class="flex gap-6">
-                          <li>
-                            <a href="">
-                              <button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Inicia Sesión</button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="">
-                              <button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Registrate</button>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+
+                    <div class="flex flex-col items-center justify-center">
+                      <ul class="flex gap-6">
+                        <li>
+                          <a href="">
+                            <button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Inicia Sesión</button>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <button class="text-white border-6 rounded-full px-5 py-2 bg-[#e95f4a]">Registrate</button>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                       
                 </div>
                 {{-- <div class='flex-1 flex justify-center py-1'>
