@@ -15,7 +15,7 @@
 
 <a href="{{ route('profile', $user) }}"></a>
 
-    <div class="py-8 relative object-center max-w-2xl mx-auto">
+    <div class="py-8 relative object-center max-w-2xl mx-auto md:z-0">
         <div class="overflow-x-auto whitespace-nowrap">
           <div class="inline-block px-4">
             <img src="{{ asset('img/Rancho2.jpg') }}" class="" alt="">

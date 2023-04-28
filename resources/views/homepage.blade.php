@@ -52,11 +52,15 @@
                       </ul>
                     </div>
                       
-                </div>
-                {{-- <div class='flex-1 flex justify-center py-1'>
+                {{-- </div>
+                    <div class='flex-1 flex justify-center py-1'>
                     <img src={{asset("/img/Rancho2.jpg")}} alt="hero" class='h-3/5'/>
-                </div> --}}
+                </div>
+            </div> --}}
+
+            <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
             </div>
+
         </section>
 
 </body>
