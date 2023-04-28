@@ -1,4 +1,5 @@
 *
-
+# Archivos ignorados
 !.gitignore
 !aero.jpg
+!default-pfp.png

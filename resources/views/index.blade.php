@@ -15,24 +15,17 @@
 
 <a href="{{ route('profile', $user) }}"></a>
 
-<div class="max-w-2xl mx-auto">
-
-	<div id="default-carousel" class="relative" data-carousel="static">
-     
-        <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-           
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl ">Primer Slide</span>
-                <img src="{{ asset('img/Rancho2.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
-           
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('img/Rancho1.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
-           
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('img/Rancho2.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
+    <div class="py-8 relative object-center max-w-2xl mx-auto">
+        <div class="overflow-x-auto whitespace-nowrap">
+          <div class="inline-block px-4">
+            <img src="{{ asset('img/Rancho2.jpg') }}" class="" alt="">
+          </div>
+          <div class="inline-block px-4 ">
+            <img src="{{ asset('img/Rancho1.jpg') }}" class="" alt="">
+          </div>
+          <div class="inline-block px-4">
+            <img class="" src="{{ asset('img/Rancho2.jpg') }}"class="" alt="">
+          </div>
         </div>
         
         
