@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
-    @vite('resources/css/app.css')
-    
+@extends('layout.AppLayout') @section('title') Homepage @endsection
+  
+@section('content')
 
-    <!-- FONTS -->
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Paleta de Colores -->
-    <!-- prim: #e95f4a
-         secu: #8661c1
-         whte: #ecf0f1 
-         blck: #050505 -->
-
-</head>
-<body class="font-body h-screen">
     <x-navbarAuth></x-navbarAuth>
 
     <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')] bg-cover bg-center h-screen py-4 md:px-24 px-4 content-center text-center">
@@ -65,13 +46,13 @@
 
         </section>
 
-        <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6">
+        <div class="max-w-md bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 mx-auto">
           <div class="md:flex">
               <div class="md:shrink-0">
                   <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Modern building architecture">
               </div>
               <div class="p-8">
-                  <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Quienes Somos?</div>
+                  <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">¿Quiénes Somos?</div>
                   <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
               </div>
               
@@ -103,5 +84,4 @@
           
       </div>
   </div>
-</body>
-</html>
+@endsection
