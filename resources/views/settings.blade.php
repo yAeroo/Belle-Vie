@@ -69,7 +69,7 @@
   </section>
 
 
-  {{-- <div class="min-h-screen p-10 bg-gray-100">
+  <div class="min-h-screen p-10 bg-gray-100">
     <div class="max-w-md mx-auto">
       <label for="select" class="font-semibold block py-2">Configuración de la cuenta</label>
       <div class="relative">
@@ -101,7 +101,7 @@
         </div> 
       </div>
     </div>
-  </div> --}}
+  </div>
 
 
 @endsection
