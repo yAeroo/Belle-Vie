@@ -17,7 +17,7 @@
 <br>    
 
 <section class="relative z-0">
-    <div class="max-w-2xl mx-auto relative z-0 >
+    <div class="max-w-2xl mx-auto relative z-0">
         <div id="default-carousel" class="relative z-0" data-carousel="static">
             <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
                 <div class="hidden duration-700 ease-in-out md:z-0" data-carousel-item>
