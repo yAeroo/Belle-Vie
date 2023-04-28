@@ -45,7 +45,7 @@
               </div>
               <br>
               <div class="grid grid-cols-2 gap-5">
-                <input type="text" placeholder="nombre" name="username" class="border border-gray-400 py-1 px-2">
+                <input type="text" placeholder="nombre" name="name" class="border border-gray-400 py-1 px-2">
                 <input type="text" placeholder="Apellido" name="last_name" class="border border-gray-400 py-1 px-2">
               </div>
               <div class="mt-5">  
@@ -63,10 +63,10 @@
                 <input type="radio"  name="gender" id="M" value="M" class="border border-gray-400">M
               </div>
               <br>
-              <div class="grid grid-cols-2 gap-5">
-                <select name="type" id="type">
-                  <option value="user">Usuario</option>
-                  <option value="owner">Dueño</option>
+              <div class="mt-5">
+                <select name="type" id="type" class="order border-gray-100 py-1 px-2 w-full">
+                  <option value="user" class="order border-gray-800 py-1 px-2 w-full">Usuario</option>
+                  <option value="owner" class="order border-gray-800 py-1 px-2 w-full" >Dueño</option>
                 </select>
               </div>
               <div class="mt-5">
@@ -77,5 +77,5 @@
         </div>
       </div>
     </div>
-  </body>
+  </body>        
 </html>
