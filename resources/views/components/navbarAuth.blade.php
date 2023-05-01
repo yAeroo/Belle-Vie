@@ -7,7 +7,7 @@
       </div>
       <div
           class="nav-links ml-auto duration-500 md:static absolute bg-[#f87171] md:min-h-fit 
-          min-h-[15vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 md:z-0">
+          min-h-[18vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 md:z-0">
           <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-gray-50 md:z-0">
               @if (Auth()->user())
                 <li>
@@ -36,6 +36,6 @@
   const navLinks = document.querySelector('.nav-links')
   function onToggleMenu(e){
       e.name = e.name === 'menu' ? 'close' : 'menu'
-      navLinks.classList.toggle('top-[8%]')
+      navLinks.classList.toggle('top-[9%]')
   }
 </script>

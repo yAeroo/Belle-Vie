@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Index</title>
+    <title>Inicio | Belle Vie</title>
     @vite('resources/css/app.css')
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
@@ -13,7 +13,6 @@
 <body class="bg-[#ECF0F1]">
 <x-navbar></x-navbar>
 
-<a href="{{ route('profile', $user) }}"></a>
 <br>    
 
 <section class="relative z-0">

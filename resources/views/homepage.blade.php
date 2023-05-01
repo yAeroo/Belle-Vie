@@ -1,4 +1,4 @@
-@extends('layout.AppLayout') @section('title') Homepage @endsection
+@extends('layout.AppLayout') @section('title') Bienvenida @endsection
   
 @section('content')
 
