@@ -9,10 +9,11 @@
 <body>
     <form action="{{ route('config.store', $user) }}" method="POST">
         @csrf
+        <x-errors />
         {{-- <input type="text" name="username" placeholder="{{ $user->username }}">  --}}
         <input type="email" name="email" placeholder="{{ $user->email }}"> 
         <input type="text" name="phone_number" placeholder="{{ $user->phone_number }}"> 
-        <input type="password" name="oldPW" placeholder=""> 
+        <input type="password" name="oldPW" placeholder="Old"> 
         <input type="password" name="newPW" placeholder="New"> 
         <input type="password" name="newPW_confirmation" placeholder="New-Confirmation">
 

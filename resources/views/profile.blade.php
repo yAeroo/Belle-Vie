@@ -15,13 +15,15 @@
                     alt="profile-pic">
             </div>
 
-            <div id="edit-bttn" class="relative">
-                <a
-                    href="{{ route('profile.settings', $user) }}"    
-                    class="absolute -top-20 lg:-top-28 left-[85%] md:left-[70%] xl:left-[82%] flex md:w-48 items-center justify-center bg-[#8661c1] p-2 rounded-full">
-                <x-icon name='pencil' color='white' variant='solid'/>
-                </a>
-            </div>
+            @if ($user->id == Auth()->user()->id)
+                <div id="edit-bttn" class="relative">
+                    <a
+                        href="{{ route('profile.settings', $user) }}"    
+                        class="absolute -top-20 lg:-top-28 left-[85%] md:left-[70%] xl:left-[82%] flex md:w-48 items-center justify-center bg-[#8661c1] p-2 rounded-full">
+                    <x-icon name='pencil' color='white' variant='solid'/>
+                    </a>
+                </div>
+            @endif
 
             <div id="profile-name" class="my-5">
                 <p class="font-title text-4xl md:text-5xl text-center font-bold tracking-wide transition-all">

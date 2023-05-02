@@ -66,18 +66,20 @@ class SettingsController extends Controller
                         ->where('id', $user->id)
                         ->update(['phone_number'=> $newPhone]);
         }
+        
+        if ($request->oldPW != "") {
+            
+            if (Hash::check($request->oldPW, $user->password)) {
+                if ($request->newPW != "" && !Hash::check($request->newPW, $user->password)) {
+                    $request->validate([
+                        'newPW'=> 'confirmed|max:30|min:4'
+                    ]);
 
-        if ($request->email != "" && $request->email != $user->email) {
-
-            $request->validate([
-                'email'=> 'bail|required|unique:users|email|max:30'
-            ]);
-
-            $newEmail = $request->email;
-
-            $sqlUpdateDB = DB::table('users')
-                        ->where('id', $user->id)
-                        ->update(['email'=> $newEmail]);
+                    $sqlUpdateDB = DB::table('users')
+                                ->where('id', $user->id)
+                                ->update(['password'=> Hash::make($request->newPW)]);
+                }
+            }
         }
         
         return Redirect::back();
