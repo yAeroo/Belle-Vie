@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -22,6 +23,10 @@ class LoginController extends Controller
 
             return redirect('index');
         }
+
+        throw ValidationException::withMessages([
+            'email' => __('auth.failed')
+        ]);
     }
 
     public function logout(Request $request){
