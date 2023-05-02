@@ -84,4 +84,22 @@
           
       </div>
   </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const element = document.getElementById('my-section');
+      const position = element.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.5;
+  
+      if (position < screenPosition) {
+        const h1 = document.querySelector('h1');
+        const p = document.querySelector('p');
+        h1.classList.add('opacity-100', 'translate-y-0');
+        p.classList.add('opacity-100', 'translate-y-0');
+        h1.classList.remove('opacity-0', 'translate-y-5');
+        p.classList.remove('opacity-0', 'translate-y-5');
+      }
+    });
+  </script>
+
 @endsection
