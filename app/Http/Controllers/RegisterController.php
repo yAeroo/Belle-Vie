@@ -14,10 +14,6 @@ class RegisterController extends Controller
         return view('auth.register');
     }
 
-    public function index2(){
-        return view('auth.registerTest');
-    }
-
     public function store(Request $request){
         $request->validate([
             'username'=> 'bail|required|unique:users|alpha_dash:ascii|max:15|min:4',

@@ -1,0 +1,50 @@
+input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.gender-container {
+    margin-bottom: 1em;
+}
+
+.gender-input {
+    cursor: pointer;
+    width: 100px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+
+    transition: 0.3s;
+}
+.gender-input img {
+    height: 20px;
+    width: 20px;
+}
+
+input[type="radio"]:checked ~ .gender-input {
+    background-color: black;
+}
+
+.gender-input:hover,
+.gender-input:focus-within {
+    background: black;
+}
+
+input[type="radio"]:checked + .gender-input {
+    background: black;
+}
+
+.gender-input:hover img {
+    filter: grayscale(100%) brightness(200%);
+}
+
+input[type="radio"]:checked + .gender-input img {
+    filter: grayscale(100%) brightness(200%);
+}

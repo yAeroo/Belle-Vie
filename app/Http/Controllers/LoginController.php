@@ -11,10 +11,6 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
-    public function index2(){ 
-        return view('auth.loginTest');
-    }
-
     public function store(Request $request){
         $credentials = $request->validate([
             'email'=>'required|email|max:30',

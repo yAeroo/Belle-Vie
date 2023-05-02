@@ -17,7 +17,7 @@
 
 </head> 
 
-<body>
+<body class="font-body">
     @yield('content') {{-- Campo para agregar el propio contenido para la vista --}}
 </body>
 

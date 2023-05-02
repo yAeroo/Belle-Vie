@@ -8,7 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        body: ["'Poppins', sans-serif"]
+        body: ["'Poppins', sans-serif"],
+        title: ["'Kayak Sans', sans-serif"]
+      },
+
+      colors:{
+        prim: '#f87171',
+        // secu: []
       }
     },
   },
