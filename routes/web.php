@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,7 @@ Route::get('/index', [IndexController::class, 'index'])->name('index');
 Route::get('/profile/{user:username}', [ProfileController::class, 'index'])->name('profile');
 Route::get('/profile/{user:username}/config',  [SettingsController::class, 'index'])->name('profile.settings'); // <=== Ajustes de perfil
 Route::get('/profile/{user:username}/configTest',  [SettingsController::class, 'index2'])->name('profile.settings2'); // <=== Ajustes de perfil
-Route::post('/profile/{user:username}/config/store',  [SettingsController::class, 'store'])->name('config.store'); // <=== Guardando ajustes
+Route::post('/profile/{user:username}/config/store',  [SettingsController::class, 'store'])->name('config.store'); // <=== Guardando ajustes    
+
+// --=== Página de Buesquedas ===--
+Route::get('/index/search', [SearchController::class, 'index'])->name('search');
