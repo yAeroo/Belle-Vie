@@ -18,15 +18,15 @@ module.exports = {
       },
       keyframes: {
         'fade-font':{
-          '0%':{ transform: 'translateY(-10px)',
+          '0%':{ transform: 'translateY(-20px)',
                  opacity: '0.1'},
 
-          '100%':{transform: 'translateY(20px)',
+          '100%':{transform: 'translateY(0)',
                   opacity: '1'},
         }
       },
       animation:{
-        'fade-font': 'fade-font 3s ease-in-out forwards'
+        'fade-font': 'fade-font 2s ease-in-out forwards'
       }
     },
   },
