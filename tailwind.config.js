@@ -18,7 +18,7 @@ module.exports = {
       },
       keyframes: {
         'fade-font':{
-          '0%':{ transform: 'translateY(-20px)',
+          '0%':{ transform: 'translateY(-25px)',
                  opacity: '0.1'},
 
           '100%':{transform: 'translateY(0)',
