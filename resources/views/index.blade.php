@@ -11,7 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#ECF0F1]">
-<x-navbar></x-navbar>
+    
+<x-navbar />
 
 <br>    
 
@@ -96,29 +97,5 @@
     <div class="max-w-md mx-auto md:max-w-2xl flex items-center justify-center  ">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496646.2348708033!2d-89.74153659042916!3d13.471095050096896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7ccdfa00775ee3%3A0xf25574d56eb5e13!2sRanchos%20de%20Playa%20MM.!5e0!3m2!1ses-419!2ssv!4v1682185261624!5m2!1ses-419!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
-    <br>
-
-    
-<footer class="bg-[#E95F4A]  shadow  ">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between ">
-            <a href="#" class="flex items-center mb-4 sm:mb-0 ">
-                <img src="{{ asset('img/favicon.png') }}" class="h-8 mr-3 grid  place-items-center" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-center ">Belle Vie</span>
-            </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white">
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Sobre Nosotros </a>
-                </li>
-                
-                <li>
-                    <a href="https://github.com/yAerosmith/Belle-Vie" class="flex flex-wrap items-center justify-center mr-4 hover:underline md:mr-6">| Respositorio</a>
-                </li>
-        </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-white sm:text-center ">© 2023 <a href="" class="hover:underline">Belle Vie™</a></span>
-    </div>
-</footer>
 </body>
 </html>

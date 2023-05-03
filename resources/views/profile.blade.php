@@ -2,36 +2,94 @@
 
 @section('content')
 <x-navbar />
-    <section id="profile" class="min-h-screen bg-[url({{ asset('img/profile-banner.png') }})] bg-cover flex items-end justify-center pt-40 ">
-        <article
-            id="profile-info"
-            class="bg-white h-[80vh] sm:w-10/12 w-full sm:rounded-t-3xl p-5 shadow-black shadow-lg transition-all flex flex-col">
-            <div
-                id="profile-pic"
-                class="w-full flex justify-center">
-                <img
-                    src="{{ asset('storage') . '/pfp/' . $user->profile_pic }}"
-                    class="-mt-28 w-52 h-52 lg:w-60 lg:h-60 rounded-full border-8 border-solid border-white transition-all"
-                    alt="profile-pic">
+
+<section id="profile" class="min-h-screen bg-[url({{ asset('img/profile-banner.png') }})] bg-cover flex items-end justify-center pt-40 ">
+    <article id="profile-info" class="bg-white min-h-[80vh] sm:w-10/12 w-full sm:rounded-t-3xl p-5 pb-10 shadow-black shadow-lg transition-all flex flex-col">
+        <div
+            id="profile-pic"
+            class="w-full flex justify-center">
+            <img
+                src="{{ asset('storage') . '/pfp/' . $user->profile_pic }}"
+                class="-mt-28 w-52 h-52 lg:w-60 lg:h-60 rounded-full border-8 border-solid border-white transition-all"
+                alt="profile-pic">
+        </div>
+
+        @if ($user->id == Auth()->user()->id)
+            <div id="edit-bttn" class="relative">
+                <a
+                    href="{{ route('profile.settings', $user) }}"    
+                    class="absolute -top-20 lg:-top-28 left-[85%] md:left-[70%] xl:left-[82%] flex md:w-48 items-center justify-center bg-secu p-2 rounded-full">
+                <x-icon name='pencil' color='white' variant='solid'/>
+                </a>
+            </div>
+        @endif
+
+        <div id="profile-name" class="my-5 mb-14">
+            <p class="font-title text-3xl md:text-5xl text-center font-bold tracking-wide transition-all">
+                {{ $user_fn }}
+            </p>
+            <p class="font-title text-xl md:text-3xl text-center font-bold tracking-wide transition-all text-gray-500"> 
+                {{ Str::title($user->type) == "User" ? "Usuario" : "Propietario" }}
+            </p>
+        </div>
+
+        <div class="personal-info-cont w-full  px-0 md:px-5 lg:px-32">
+            <div class="contacts mb-14">
+                <p class="font-bold text-lg scroll-smooth text-secu divide-solid">Contactos:</p>
+                <hr class="border-prim sm:mx-auto dark:border-prim mt-1"/>
+
+                <ul class="w-full px-5 xl:px-60">
+                    <li class="flex justify-between my-4">
+                        <div class="flex">
+                            <x-icon name='envelope' variant="solid" color="#f87171" class="mx-3"/>
+                            <p class="font-bold mx-3">E-mail:</p>
+                        </div>
+    
+                        <p>{{ $user->email }}</p>
+                    </li>
+    
+                @if ($user->phone_number != "")
+                    <li class="flex justify-between my-4">
+                        <div class="flex">
+                            <x-icon name='phone' variant="solid" color="#f87171" class="mx-3"/>
+                            <p class="font-bold">Número de teléfono:</p>
+                        </div>
+    
+                        <p>{{ $user->phone_number }}</p>
+                    </li>
+                @endif
+                </ul>
             </div>
 
-            @if ($user->id == Auth()->user()->id)
-                <div id="edit-bttn" class="relative">
-                    <a
-                        href="{{ route('profile.settings', $user) }}"    
-                        class="absolute -top-20 lg:-top-28 left-[85%] md:left-[70%] xl:left-[82%] flex md:w-48 items-center justify-center bg-[#8661c1] p-2 rounded-full">
-                    <x-icon name='pencil' color='white' variant='solid'/>
-                    </a>
+            @if ($user->type == 'owner')
+                <div class="places">
+                    <p class="font-bold text-lg scroll-smooth text-secu divide-solid">Propiedades:</p>
+                    <hr class="border-prim sm:mx-auto dark:border-prim  mt-1" />
+
+                    @if ($places->count() == 0)
+                        Cero lugares
+                    @else
+                        <div id="cards-container" class="p-10">
+                            @foreach ($places as $place)
+                                <div class="md:flex">
+                                    <div class="md:shrink-0">
+                                        <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Modern building architecture">
+                                    </div>
+                                    <div class="p-8">
+                                        <div class="uppercase tracking-wide text-sm  text-[#050505]  font-semibold">Rancho en Lomas Altas</div>
+                                        <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
+                                        <button type="button" class="bg-[#E95F4A] text-white p-2 rounded-lg  hover:bg-white hover:text-black  hover:border-gray-300 ">Información</button>
+                                    </div>
+                                    
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
             @endif
-
-            <div id="profile-name" class="my-5">
-                <p class="font-title text-4xl md:text-5xl text-center font-bold tracking-wide transition-all">
-                    {{ $user_fn }}
-                </p>
-            </div>
-        </article>
-    </section>
+        </div>
+    </article>
+</section>
 @endsection
 
 

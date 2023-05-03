@@ -19,6 +19,8 @@
 
 <body class="font-body">
     @yield('content') {{-- Campo para agregar el propio contenido para la vista --}}
+
+    <x-footer /> {{-- Componente que renderiza el footer de la página --}}
 </body>
 
 </html>

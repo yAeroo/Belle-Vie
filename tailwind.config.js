@@ -14,7 +14,7 @@ module.exports = {
 
       colors:{
         prim: '#f87171',
-        // secu: []
+        secu: '#8661c1'
       }
     },
   },
