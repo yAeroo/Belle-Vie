@@ -7,7 +7,7 @@
     <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')] bg-cover bg-center h-screen py-4 md:px-24 px-4 content-center text-center">
     
         
-            <div class='flex md:flex-row flex-col gap-5 my-14 justify-items-center'>
+            <div class='flex md:flex-row flex-col gap-5 my-14 justify-items-center animate-fade-font'>
                 <div class='flex-1'>
                     <br>
                     <h1 class='text-5xl text-white font-semibold tracking-wide md:leading-tight 
@@ -46,10 +46,10 @@
 
         </section>
 
-        <div class="max-w-md bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 mx-auto">
+        <div id="fade" class="max-w-md bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 mx-auto opacity-0 translate-x-5 transition duration-1000 aos-item" data-aos="fade-left">
           <div class="md:flex">
               <div class="md:shrink-0">
-                  <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Modern building architecture">
+                  <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Rancho 1">
               </div>
               <div class="p-8">
                   <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">¿Quiénes Somos?</div>
@@ -59,10 +59,10 @@
           </div>
       </div>
 
-      <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6">
+      <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item" data-aos="fade-left">
         <div class="md:flex">
             <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho3.jpg') }}" alt="Modern building architecture">
+                <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho3.jpg') }}" alt="Rancho 2">
             </div>
             <div class="p-8">
                 <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Misión</div>
@@ -72,10 +72,10 @@
         </div>
     </div>
 
-    <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6">
+    <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item" data-aos="fade-left"">
       <div class="md:flex">
           <div class="md:shrink-0">
-              <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho2.jpg') }}" alt="Modern building architecture">
+              <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho2.jpg') }}" alt="Rancho 3">
           </div>
           <div class="p-8">
               <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Visión</div>
@@ -86,20 +86,10 @@
   </div>
 
   <script>
-    window.addEventListener('scroll', function() {
-      const element = document.getElementById('my-section');
-      const position = element.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight / 1.5;
-  
-      if (position < screenPosition) {
-        const h1 = document.querySelector('h1');
-        const p = document.querySelector('p');
-        h1.classList.add('opacity-100', 'translate-y-0');
-        p.classList.add('opacity-100', 'translate-y-0');
-        h1.classList.remove('opacity-0', 'translate-y-5');
-        p.classList.remove('opacity-0', 'translate-y-5');
-      }
-    });
+    AOS.init({
+    duration: 1000, // duración de la animación (en milisegundos)
+    offset: 200, // offset desde el borde superior de la ventana (en píxeles)
+  });
   </script>
 
 @endsection

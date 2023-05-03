@@ -10,6 +10,9 @@
     @vite('resources/css/app.css') {{-- Importando CSS para TailwindCSS --}}
     @yield('css', '') @yield('js', '') {{-- ¡OPCIONALES! Campos opcionales para JS y CSS específicos --}}
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> {{--Libreria AOS (Animate on Scroll)--}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> {{--Libreria AOS (Animate on Scroll)--}}
+
     <!-- FONTS -->
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
