@@ -2,7 +2,7 @@
   
 @section('content')
 
-    <x-navbar></x-navbar>
+    <x-navbar />
 
     <h1>Rancho <:v</h1>
 
