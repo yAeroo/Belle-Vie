@@ -8,6 +8,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\placeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,6 @@ Route::post('/profile/{user:username}/config/store',  [SettingsController::class
 
 // --=== Página de Buesquedas ===--
 Route::get('/index/search', [SearchController::class, 'index'])->name('search');
+
+// --=== Visualización de Ranchos ===--
+Route::get('/showPlace', [placeController::class, 'index'])->name('place');
