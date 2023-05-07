@@ -15,9 +15,6 @@ class ProfileController extends Controller
     }
 
     public function index(User $user){
-
-        $places = DB::table('places')->get();
-
         $userPlaces = Place::where('owner_id', $user->id)->get();
 
         return view('profile',[

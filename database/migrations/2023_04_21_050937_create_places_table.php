@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('owner_id')->constrained('users')->onDelete('cascade');
             $table->string('place_name', 20);
             $table->string('description', 50);
+            $table->double('price', 8, 2);
             $table->string('img', 30);
             $table->boolean('availability');
             $table->timestamps();

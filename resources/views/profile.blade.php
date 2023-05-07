@@ -65,23 +65,23 @@
                 <div class="places">
                     <p class="font-bold text-lg scroll-smooth text-secu divide-solid">Propiedades:</p>
                     <hr class="border-prim sm:mx-auto dark:border-prim  mt-1" />
-
                     @if ($places->count() == 0)
                         Cero lugares
                     @else
-                        <div id="cards-container" class="p-10">
+                        <div id="cards-container" class="p-5 lg:px-12">
+                            
                             @foreach ($places as $place)
-                                <div class="md:flex">
-                                    <div class="md:shrink-0">
-                                        <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Modern building architecture">
+                                <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')] bg-cover bg-center h-60 py-4 md:px-0 text-center relative rounded-lg">
+                                    <div id="fade" class="max-w-md bg-white drop-shadow-lg overflow-hidden md:max-w-md gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item absolute inset-x-0 bottom-5 sm:max-w-sm" data-aos="fade-left">
+                                        <div class="flex items-center justify-center px-2 py-2">
+                                                <div class="w-2/3">
+                                                <div class="uppercase tracking-wide text-lg  text-prim font-semibold">{{ $place->place_name }}</div>
+                                                <div class="uppercase  font-semibold"> ${{ $place->price }}</div>
+                                                <a href="#" class=""><p class="mt-2 p-2 text-white rounded-lg bg-secu">Más información</p></a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm  text-[#050505]  font-semibold">Rancho en Lomas Altas</div>
-                                        <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
-                                        <button type="button" class="bg-[#E95F4A] text-white p-2 rounded-lg  hover:bg-white hover:text-black  hover:border-gray-300 ">Información</button>
-                                    </div>
-                                    
-                                </div>
+                                </section>
                             @endforeach
                         </div>
                     @endif
@@ -90,6 +90,13 @@
         </div>
     </article>
 </section>
+
+<script>
+    AOS.init({
+    duration: 1000, // duración de la animación (en milisegundos)
+    offset: 200, // offset desde el borde superior de la ventana (en píxeles)
+  });
+</script>
 @endsection
 
 
