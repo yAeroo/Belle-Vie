@@ -7,10 +7,12 @@
     <title>Config</title>
 </head>
 <body>
-    <form action="{{ route('config.store', $user) }}" method="POST">
+    <form action="{{ route('config.store', $user) }}" method="POST" enctype='multipart/form-data'>
         @csrf
         <x-errors />
-        {{-- <input type="text" name="username" placeholder="{{ $user->username }}">  --}}
+
+
+        <input type="file" name="image" accept="image/png, image/jpeg, image/jpg" >
         <input type="email" name="email" placeholder="{{ $user->email }}"> 
         <input type="text" name="phone_number" placeholder="{{ $user->phone_number }}"> 
         <input type="password" name="oldPW" placeholder="Old"> 

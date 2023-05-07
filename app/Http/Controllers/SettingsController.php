@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Intervention\Image\Facades\Image;
+use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Validator;
 
 class SettingsController extends Controller
 {
@@ -41,6 +43,27 @@ class SettingsController extends Controller
 
     public function store(Request $request, User $user){
         
+        if ($request->image){
+
+            $this->validate($request, [
+                'image' => ['image', 'mimes:jpeg,png,jpg'],
+            ]);
+
+            $image = $request->file('image');
+
+            $newImage = Str::uuid() . '.' . $image->extension();
+
+            $imageUpdate = Image::make($image);
+            $imageUpdate->fit(500, 500);
+
+            $imageSave = storage_path('app') . '/public/pfp/' . $newImage;
+            $imageUpdate->save($imageSave);
+
+            $sqlBDUpdateName = DB::table('users')
+                ->where('id', $user->id)
+                ->update(['profile_pic' => $newImage]);
+        }
+
         if ($request->email != "" && $request->email != $user->email) {
 
             $request->validate([

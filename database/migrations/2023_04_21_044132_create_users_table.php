@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('password'); // Columna 'Password' - String
             $table->enum('gender', ['M', 'F']); // Columna 'gender' - Femenino y masculino
             $table->enum('type', ['user', 'admin', 'owner']); // Columna 'type' - Rol de usuario, admin y propietario
-            $table->string('profile_pic', 30)->default("default-pfp.png"); // Columna 'profile_pic' - string con valor por default "default-pfp.png" para nuevos usuarios
+            $table->string('profile_pic', 40)->default("default-pfp.png"); // Columna 'profile_pic' - string con valor por default "default-pfp.png" para nuevos usuarios
             $table->rememberToken();
             $table->timestamps();
         });
