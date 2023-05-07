@@ -19,7 +19,7 @@ class Counter extends Component
     {
         $usuarios = User::where('rol', '<>', 'admin');
 
-        return view('livewire.buscador', [
+        return view('livewire.counter', [
             'users' => $usuarios
 
         ]);}
