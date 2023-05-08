@@ -1,10 +1,16 @@
 <div>
-    <form wire:submit.prevent='BuscarDatosForm' autocomplete="off">
-        <div class="input-b flex gap-2">
-            <i class="fi fi-rr-search mt-1"></i>
-            <label for="buscarpor" class="w-full">
-                <input type="text" name="BuscarPor" id="" class="font-cuerpo w-full" wire:model='termino'>
-            </label>
-        </div>
-    </form>
+    <form>
+        <input class="form-control" wire:model="searchTerm" type="text" placeholder="What are you searching for...">
+    </form><br>
+
+    <ul class="list-group">
+        @if($users && $users->count() > 0)
+        @foreach($users as $user)
+        <li class="list-group-item">{{$user->name}}</li>
+        @endforeach
+        @else
+        <p class="text-info">No users found using your search query</p>
+        @endif
+
+    </ul>
 </div>

@@ -7,20 +7,15 @@ use App\Models\User;
 
 class Counter extends Component
 {
-    public $usuarios;
-
-    public function BuscarDatosForm()
-    {
-        // Emito el evento para el padre
-        $this->emit('terminoBusquedaGeneral', $this->termino, $this->usuarios);
-    }
-
+    public $searchTerm ='';
+    public $users;
     public function render()
     {
-        $usuarios = User::where('rol', '<>', 'admin');
-
-        return view('livewire.counter', [
-            'users' => $usuarios
-
-        ]);}
+        if (empty($this->searchTerm)) {
+            $this->users = User::where('name', $this->searchTerm)->get();
+        } else {
+            $this->users =User::where('name', 'like', '%'.$this->searchTerm.'%')->get();
+        }
+        return view('livewire.counter');
+    }
 }
