@@ -1,0 +1,11 @@
+input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+#div-file{
+    background-color: rgba(255, 71, 87,0.5)
+}

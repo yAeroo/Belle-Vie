@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
-use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Validator;
 
 class SettingsController extends Controller
 {
@@ -24,9 +22,9 @@ class SettingsController extends Controller
         if ($user->id != Auth()->user()->id) {
             return Redirect::back();
         }
-        
-        return view('settings',[
-            'user' => $user
+
+        return view('settings.UserConfig',[
+            'user' => $user, 'user_fn' => $user->name." ".$user->last_name,
         ]);
     }
 
@@ -44,7 +42,6 @@ class SettingsController extends Controller
     public function store(Request $request, User $user){
         
         if ($request->image){
-
             $this->validate($request, [
                 'image' => ['image', 'mimes:jpeg,png,jpg'],
             ]);
@@ -59,10 +56,12 @@ class SettingsController extends Controller
             $imageSave = storage_path('app') . '/public/pfp/' . $newImage;
             $imageUpdate->save($imageSave);
 
-            $sqlBDUpdateName = DB::table('users')
+            $sqlUpdateDB = DB::table('users')
                 ->where('id', $user->id)
                 ->update(['profile_pic' => $newImage]);
-        }
+            $imageStatus = true;
+
+        }else{ $imageStatus = false;}
 
         if ($request->email != "" && $request->email != $user->email) {
 
@@ -105,6 +104,6 @@ class SettingsController extends Controller
             }
         }
         
-        return Redirect::back();
+        return redirect()->back()->with(['imageStatus' => $imageStatus]);
     }
 }
