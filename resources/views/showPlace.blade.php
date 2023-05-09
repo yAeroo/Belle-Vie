@@ -26,16 +26,34 @@
   
       <hr class="border-t border-gray-300 my-8">
 
-      <div id="fade" class="bg-prim w-screen drop-shadow-lg overflow-hidden my-12 gap-6">
-        <div class="p-8">
-          <div class="uppercase text-white text-shadow font-bold text-lg">Reseñas</div>
-          <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
-          <div id="fade" class="bg-secu w-screen drop-shadow-lg overflow-hidden my-12 gap-6">
+      <div class="bg-prim w-screen drop-shadow-lg overflow-hidden my-12">
+        <div class="px-6 py-8">
+          <div class="uppercase text-white text-shadow font-bold text-lg pb-6">Reseñas</div>
+
+            <div class="flex items-center px-4 py-4  bg-white">
+              <div class="w-1/3">
+                <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="imgPerfil">
+              </div>
+              <div class="w-2/3">
+                <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Gregorio Ramirez</div>
+                <p class="mt-2 p-2 text-slate-500">Emm, el rancho esta bueno we (texto relleno alv texto relleno alv texto relleno alv).</p>
+              </div>
+            </div>
           
+            <div class="flex items-center px-4 py-4 mt-6 bg-white">
+              <div class="w-1/3">
+                <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="ImgPerfil">
+              </div>
+              <div class="w-2/3">
+                <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Gregorio Ramirez</div>
+                <p class="mt-2 p-2 text-slate-500">Emm, el rancho esta bueno we (texto relleno alv texto relleno alv texto relleno alv).</p>
+              </div>
+            </div>
+
           </div>
-        
         </div>
       </div>
+      
       
       
 
