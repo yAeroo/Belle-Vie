@@ -29,7 +29,7 @@
                 {{ $user_fn }}
             </p>
             <p class="font-title text-xl md:text-3xl text-center font-bold tracking-wide transition-all text-gray-500"> 
-                {{ Str::title($user->type) == "User" ? "Usuario" : "Propietario" }}
+                {{Str::title($user->username)}} · {{ Str::title($user->type) == "User" ? "Usuario" : "Propietario" }}
             </p>
         </div>
 

@@ -1,5 +1,4 @@
-<div id='modal' class="h-screen w-full fixed left-0 top-0 flex justify-center place-items-center bg-black bg-opacity-50  z-40">
-    {{-- {{ Session::get('imageStatus') ? '' : 'hidden'  }} --}}
+<div id='modal' class="h-screen w-full fixed left-0 top-0 flex justify-center place-items-center bg-black bg-opacity-50 {{ Session::get('imageStatus') ? '' : 'hidden'  }} z-40">
     <!-- Ventana Emergente -->
     <div class="bg-[#ecf0f1] rounded shadow-lg w-11/12 md:w-1/3">
         @if (Session::get('imageStatus'))
@@ -22,16 +21,9 @@
                 <h3 class="font-semibold text-lg">Actualizar imagen de perfil</h3>
             </div>
 
-            <form action="{{ route('config.store', $user) }}" method="POST" enctype='multipart/form-data'>
+            <form action="{{ route('config.store', $user) }}" method="POST" enctype='multipart/form-data' class="w-full">
             @csrf
-            <label for="image" id="div-file" class="px-5 py-24 m-10 flex justify-center items-center rounded-lg">    
-                <input type="file" name="image" id="image">
-                <div class="flex justify-center flex-col items-center">
-                    <x-icon name='camera' color='white' variant='solid' class="h-10"/>
-
-                    <h3>Sube tu nueva foto de perfil</h3>
-                </div>
-            </label>
+            <x-imageUpload />
 
             <div class="flex justify-between items-center w-100 border-t p-3">
                 <p id='closeModal' class="hover:bg-gray-200 px-3 py-1 rounded text-gray mr-2 cursor-pointer">Cancelar</p>
@@ -55,7 +47,10 @@
     });
 
     closeModal.addEventListener('click', function(){
-        modal.classList.add('hidden')
+        modal.classList.add('hidden');
+        document.getElementById('image').value= null;
+        hideText.classList.remove('hidden');
+        infoArea.textContent = "";
     });
 
     acceptModal.addEventListener('click', function(){

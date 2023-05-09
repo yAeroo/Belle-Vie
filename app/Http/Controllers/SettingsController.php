@@ -40,7 +40,9 @@ class SettingsController extends Controller
     }
 
     public function store(Request $request, User $user){
-        
+
+        $success = false;
+
         if ($request->image){
             $this->validate($request, [
                 'image' => ['image', 'mimes:jpeg,png,jpg'],
@@ -60,13 +62,14 @@ class SettingsController extends Controller
                 ->where('id', $user->id)
                 ->update(['profile_pic' => $newImage]);
             $imageStatus = true;
+            $success = true;
 
         }else{ $imageStatus = false;}
 
         if ($request->email != "" && $request->email != $user->email) {
 
             $request->validate([
-                'email'=> 'bail|required|unique:users|email|max:30'
+                'email'=> 'unique:users|email|max:30'
             ]);
 
             $newEmail = $request->email;
@@ -74,6 +77,7 @@ class SettingsController extends Controller
             $sqlUpdateDB = DB::table('users')
                         ->where('id', $user->id)
                         ->update(['email'=> $newEmail]);
+            $success = true;
         }
 
         if ($request->phone_number != "" && $request->phone_number != $user->phone_number) {
@@ -87,6 +91,7 @@ class SettingsController extends Controller
             $sqlUpdateDB = DB::table('users')
                         ->where('id', $user->id)
                         ->update(['phone_number'=> $newPhone]);
+            $success = true;
         }
         
         if ($request->oldPW != "") {
@@ -100,10 +105,12 @@ class SettingsController extends Controller
                     $sqlUpdateDB = DB::table('users')
                                 ->where('id', $user->id)
                                 ->update(['password'=> Hash::make($request->newPW)]);
+                    
+                    $success = true;
                 }
             }
         }
         
-        return redirect()->back()->with(['imageStatus' => $imageStatus]);
+        return redirect()->back()->with(['imageStatus' => $imageStatus, 'success' => $success]);
     }
 }
