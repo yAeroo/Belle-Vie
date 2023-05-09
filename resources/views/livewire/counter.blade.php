@@ -1,5 +1,5 @@
 
-<div class=" bg-slate-300">
+<div class=" bg-[#f87171]">
     <h3 class="h1 alert alert-success">Busca Usuarios</h3>
     <form>
         <input class="form-control" wire:model="searchTerm" type="text" placeholder="ingresa">

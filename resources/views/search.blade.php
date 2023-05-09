@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4 offset-md-4 grid h-screen place-items-center">
+        <div class="col-md-4   h-screen place-items-center">
             @livewire('counter')
         </div>
     </div>
