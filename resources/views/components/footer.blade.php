@@ -3,7 +3,7 @@
         <div class="sm:flex sm:items-center sm:justify-between ">
             <a href="#" class="flex items-center mb-4 sm:mb-0 ">
                 <img src="{{ asset('img/favicon.png') }}" class="h-8 mr-3 grid  place-items-center" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-center ">Belle Vie</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white text-center ">Belle Vie</span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white">
                 <li>

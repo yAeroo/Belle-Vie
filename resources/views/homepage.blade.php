@@ -36,15 +36,16 @@
                     </div>
         </section>
 
-        <div id="fade" class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-md my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
-              <div class="md:shrink-0">
-                  <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Rancho 1">
+        <div id="fade" class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
+        <div class="md:flex">
+          <div class="md:shrink-0">       
+            <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Rancho 1">
               </div>
               <div class="p-8">
-                  <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">¿Quiénes Somos?</div>
-                  <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
+                <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">¿Quiénes Somos?</div>
+                <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
               </div>
-              
+            
           </div>
       </div>
 
