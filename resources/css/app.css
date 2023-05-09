@@ -13,4 +13,8 @@
 .no-scroll-x {
     max-width: 100%;
     overflow-x: hidden;
-  }
+}
+
+.text-shadow{
+    text-shadow: 2px 2px 3px black ;
+}

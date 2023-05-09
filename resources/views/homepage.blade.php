@@ -36,8 +36,7 @@
                     </div>
         </section>
 
-        <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
-          <div class="md:flex">
+        <div id="fade" class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-md my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
               <div class="md:shrink-0">
                   <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Rancho 1">
               </div>
@@ -49,10 +48,10 @@
           </div>
       </div>
 
-      <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
-          <div class="md:flex">
-              <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho3.jpg') }}" alt="Rancho 2">
+      <div id="fade" class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
+        <div class="md:flex">
+          <div class="md:shrink-0">       
+              <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho3.jpg') }}" alt="Rancho 2">
               </div>
               <div class="p-8">
                 <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Misión</div>
@@ -62,7 +61,7 @@
           </div>
       </div>
 
-    <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
+    <div id="fade" class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
       <div class="md:flex">
           <div class="md:shrink-0">
               <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho2.jpg') }}" alt="Rancho 3">

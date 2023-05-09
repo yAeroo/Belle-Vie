@@ -18,33 +18,26 @@
         </div>
       </section>
 
-    <br><br><br><br><br><br><br><br><br><br>
-
-      <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
-        <div class="md:flex">
-            <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho3.jpg') }}" alt="Rancho 2">
-            </div>
-            <div class="p-8">
-                <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Misión</div>
-                <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
-      <div class="md:flex">
-          <div class="md:shrink-0">
-              <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho2.jpg') }}" alt="Rancho 3">
-          </div>
-          <div class="p-8">
-              <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Visión</div>
-              <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
-          </div>
-          
+      <div class="p-8 flex flex-col items-center justify-center font-semibold">
+        <div class="tracking-wide text-2xl  text-[#e95f4a]">Rancho El Pepe</div>
+        <p class="mt-3 p-2 text-slate-500 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
+        <button class="bg-prim mt-4 text-white py-2 px-2 rounded-lg focus:outline-none transition duration-300 ease-in-out">Reservar Rancho</button>
       </div>
-  </div>
+  
+      <hr class="border-t border-gray-300 my-8">
+
+      <div id="fade" class="bg-prim w-screen drop-shadow-lg overflow-hidden my-12 gap-6">
+        <div class="p-8">
+          <div class="uppercase text-white text-shadow font-bold text-lg">Reseñas</div>
+          <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
+          <div id="fade" class="bg-secu w-screen drop-shadow-lg overflow-hidden my-12 gap-6">
+          
+          </div>
+        
+        </div>
+      </div>
+      
+      
 
   <script>
     AOS.init({
