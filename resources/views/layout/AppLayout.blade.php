@@ -20,7 +20,7 @@
 
 </head> 
 
-<body class="font-body overflow-x-hidden">
+<body class="font-body overflow-x-hidden no-scroll-x">
     @yield('content') {{-- Campo para agregar el propio contenido para la vista --}}
 
     <x-footer /> {{-- Componente que renderiza el footer de la página --}}

@@ -4,10 +4,12 @@
 
     <x-navbarAuth></x-navbarAuth>
 
-    <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')] bg-cover bg-center h-screen py-4 md:px-24 px-4 content-center text-center">
+    <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')] bg-cover bg-center h-screen py-4 md:px-24 px-4 content-center text-center overflow-x-hidden">
+      
+    
     
         
-            <div class='flex md:flex-row flex-col gap-5 my-14 justify-items-center animate-fade-font'>
+            <div class='flex md:flex-row flex-col gap-5 my-14 justify-items-center animate-fade-font overflow-x-hidden'>
                 <div class='flex-1'>
                     <br>
                     <h1 class='text-5xl text-white font-semibold tracking-wide md:leading-tight 
@@ -32,21 +34,9 @@
                         
                       </ul>
                     </div>
-                    
-                    
-
-                      
-                {{-- </div>
-                    <div class='flex-1 flex justify-center py-1'>
-                    <img src={{asset("/img/Rancho2.jpg")}} alt="hero" class='h-3/5'/>
-                </div>
-            </div> --}}
-
-            
-
         </section>
 
-        <div id="fade" class="max-w-md bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 mx-auto opacity-0 translate-x-5 transition duration-1000 aos-item" data-aos="fade-left">
+        <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
           <div class="md:flex">
               <div class="md:shrink-0">
                   <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Rancho 1">
@@ -59,20 +49,20 @@
           </div>
       </div>
 
-      <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item" data-aos="fade-left">
-        <div class="md:flex">
-            <div class="md:shrink-0">
+      <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
+          <div class="md:flex">
+              <div class="md:shrink-0">
                 <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho3.jpg') }}" alt="Rancho 2">
-            </div>
-            <div class="p-8">
+              </div>
+              <div class="p-8">
                 <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Misión</div>
                 <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
-            </div>
+              </div>
             
-        </div>
-    </div>
+          </div>
+      </div>
 
-    <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item" data-aos="fade-left"">
+    <div class="max-w-md mx-auto bg-white rounded-xl drop-shadow-lg overflow-hidden md:max-w-2xl my-12 gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item no-scroll-x" data-aos="fade-left">
       <div class="md:flex">
           <div class="md:shrink-0">
               <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho2.jpg') }}" alt="Rancho 3">
