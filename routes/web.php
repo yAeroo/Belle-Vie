@@ -9,6 +9,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\placeController;
+use App\Http\Controllers\PayController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +49,6 @@ Route::get('/index/search', [SearchController::class, 'index'])->name('search');
 
 // --=== Visualización de Ranchos ===--
 Route::get('/showPlace', [placeController::class, 'index'])->name('place');
+
+// --=== Página de Pago ===--
+Route::get('/pay', [PayController::class, 'index'])->name('pay');
