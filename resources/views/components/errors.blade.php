@@ -26,7 +26,7 @@
 
         setTimeout(function(){
             error.classList.add('hidden');
-        }, 7000);
+        }, 10000);
     </script>
 @endif
 
@@ -43,7 +43,7 @@
 
         setTimeout(function(){
             success.classList.add('hidden');
-        }, 7000);
+        }, 10000);
     </script>
 @endif
 

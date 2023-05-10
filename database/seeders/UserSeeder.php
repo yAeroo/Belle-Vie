@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
         $Aero->name = 'Eleazar';
         $Aero->last_name = 'Amaya';
         $Aero->email = 'aero@gmail.com';
-        $Aero->phone_number = '';
+        $Aero->phone_number = '1234-5678';
         $Aero->password = Hash::make('1234');
         $Aero->gender = 'M';
         $Aero->type = 'owner';
@@ -36,7 +36,7 @@ class UserSeeder extends Seeder
         $vini->phone_number = '';
         $vini->password = Hash::make('1234');
         $vini->gender = 'M';
-        $vini->type = 'user';
+        $vini->type = 'owner';
         $vini->save();
 
         // Usuario #3
