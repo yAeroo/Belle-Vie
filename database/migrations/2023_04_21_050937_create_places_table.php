@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('owner_id')->constrained('users')->onDelete('cascade');
             $table->string('place_name', 50);
-            $table->string('description', 500);
-            $table->string('location', 100);
+            $table->string('description', 300);
+            $table->string('location', 15);
             $table->double('price', 8, 2);
-            $table->string('img', 30);
-            $table->boolean('availability');
+            $table->string('img', 40);
+            $table->boolean('availability')->default(1);
             $table->timestamps();
         });
     }

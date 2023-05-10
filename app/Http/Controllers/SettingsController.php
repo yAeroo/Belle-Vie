@@ -28,17 +28,6 @@ class SettingsController extends Controller
         ]);
     }
 
-    public function index2(User $user){
-        
-        if ($user->id != Auth()->user()->id) {
-            return Redirect::back();
-        }
-        
-        return view('configTest',[
-            'user' => $user
-        ]);
-    }
-
     public function store(Request $request, User $user){
 
         $success = false;

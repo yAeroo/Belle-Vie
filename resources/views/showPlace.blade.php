@@ -1,26 +1,26 @@
-@extends('layout.AppLayout') @section('title') Bienvenida @endsection
+@extends('layout.AppLayout') @section('title') {{ $place->place_name }} @endsection
   
 @section('content')
 
-    <x-navbarAuth></x-navbarAuth>
+    <x-navbar />
 
-    <section class="bg-[url('{{asset("/img/Rancho3_darked.jpg")}}')] bg-cover bg-center h-80 py-4 md:px-0 text-center relative overflow-hidden">
+    <section class="bg-[url('{{ asset('storage') . '/place/' . $place->img }}')] bg-cover bg-center h-80 py-4 md:px-0 text-center relative overflow-hidden">
         <div id="fade" class="max-w-md bg-white drop-shadow-lg overflow-hidden md:max-w-md gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item absolute inset-x-0 bottom-5 sm:max-w-sm no-scroll-x" data-aos="fade-left">
           <div class="flex items-center px-2 py-2">
             <div class="w-1/3">
-              <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="Rancho 1">
+              <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('storage') . '/pfp/' . $user->profile_pic }}" alt="Rancho 1">
             </div>
             <div class="w-2/3">
-              <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Gregorio Ramirez (Propietario)</div>
-              <p class="mt-2 p-2 text-slate-500">Xx_Tilin69_xX</p>
+              <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">{{ $user_fn }}</div>
+              <p class="mt-2 p-2 text-slate-500">Propietario</p>
             </div>
           </div>
         </div>
       </section>
 
       <div class="p-8 flex flex-col items-center justify-center font-semibold">
-        <div class="tracking-wide text-2xl  text-[#e95f4a]">Rancho El Pepe</div>
-        <p class="mt-3 p-2 text-slate-500 text-justify">El Rancho "El Pepe" es una propiedad impresionante que ha sido cuidadosamente diseñada para ofrecer un ambiente de vida en el campo con comodidades modernas. La finca se encuentra en una ubicación privilegiada con vistas impresionantes a las montañas circundantes, lo que la convierte en un refugio ideal para aquellos que buscan escapar del ajetreo y el bullicio de la ciudad.</p>
+        <div class="tracking-wide text-center text-2xl  text-[#e95f4a]">{{ $place->place_name }}</div>
+        <p class="mt-3 p-2 text-slate-500 text-justify">{{ $place->description }}</p>
         <button class="bg-prim mt-4 text-white py-2 px-2 rounded-lg focus:outline-none transition duration-300 ease-in-out">Reservar Rancho</button>
       </div>
   

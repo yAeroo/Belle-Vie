@@ -1,4 +1,4 @@
-<label for="image" id="div-file" class="px-5 py-24 m-10 cursor-pointer flex justify-center items-center rounded-lg border-dashed border-2 border-[#82589F]">    
+<label for="image" id="div-file" class="px-5 py-12 m-10 cursor-pointer flex justify-center items-center rounded-lg border-dashed border-2 border-[#82589F]">    
     <input type="file" name="image" id="image">
     <div class="flex justify-center flex-col items-center w-full">
         <x-icon name='camera' color='black' variant='solid' class="h-10"/>

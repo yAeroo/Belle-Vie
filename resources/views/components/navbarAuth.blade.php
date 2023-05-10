@@ -2,7 +2,7 @@
   <nav class="flex justify-between items-center w-[92%] mx-auto z-10">
       <div>
           <a href="{{ route(Auth()->user() ? 'index' : 'homepage') }}">
-              <img class="w-16 cursor-pointer mx-2 my-2 md:z-40" src="img/favicon.png" alt="...">
+              <img class="w-16 cursor-pointer mx-2 my-2 md:z-40" src="{{ asset('img/favicon.png') }}" alt="...">
           </a>
       </div>
       <div

@@ -16,6 +16,9 @@
                     <a class="hover:text-gray-200 " href="#">Propiedades</a>
                 </li>
                 <li>
+                    <a  class="hover:text-gray-200 " href="#">Mis propiedades</a>
+                </li>
+                <li>
                     <a  class="hover:text-gray-200 " href="{{ route('profile', auth()->user()) }}">Perfil</a>
                 </li>
                 <li>

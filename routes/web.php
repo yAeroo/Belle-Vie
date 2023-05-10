@@ -41,14 +41,15 @@ Route::get('/index', [IndexController::class, 'index'])->name('index');
 // --=== Perfil de usuario ===--
 Route::get('/profile/{user:username}', [ProfileController::class, 'index'])->name('profile');
 Route::get('/profile/{user:username}/config',  [SettingsController::class, 'index'])->name('profile.settings'); // <=== Ajustes de perfil
-Route::get('/profile/{user:username}/configTest',  [SettingsController::class, 'index2'])->name('profile.settings2'); // <=== Ajustes de perfil
 Route::post('/profile/{user:username}/config/store',  [SettingsController::class, 'store'])->name('config.store'); // <=== Guardando ajustes    
 
 // --=== Página de Buesquedas ===--
 Route::get('/index/search', [SearchController::class, 'index'])->name('search');
 
-// --=== Visualización de Ranchos ===--
-Route::get('/showPlace', [placeController::class, 'index'])->name('place');
+// --=== Ranchos ===--
+Route::get('/place/{place:id}', [placeController::class, 'index'])->name('place.index'); // <=== Visualizar un rancho
+Route::get('new/place', [placeController::class, 'newIndex'])->name('place.new'); // <=== Página para nuevo rancho   
+Route::post('new/place/store', [placeController::class, 'store'])->name('place.store'); // <=== Guardando nuevo rancho  
 
 // --=== Página de Pago ===--
 Route::get('/pay', [PayController::class, 'index'])->name('pay');
