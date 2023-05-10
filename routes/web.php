@@ -53,3 +53,6 @@ Route::post('new/place/store', [placeController::class, 'store'])->name('place.s
 
 // --=== Página de Pago ===--
 Route::get('/pay', [PayController::class, 'index'])->name('pay');
+
+// --=== Página de Admin ===--
+Route::get('/index/admin', [AdminController::class, 'index'])->name('admin');

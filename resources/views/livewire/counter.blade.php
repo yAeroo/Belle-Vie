@@ -11,11 +11,10 @@
     <ul class="list-group">
         @if($users && $users->count() > 0)
         @foreach($users as $user)
-        <a class="list-group-item grid text-center max-w-md mx-auto bg-[#f87171] rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 p-5" href="{{ route('profile', $user) }}">            <img
+        <a class="list-group-item grid text-white text-3xl text-center max-w-md mx-auto bg-[#f87171] rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 p-5" href="{{ route('profile', $user) }}"><img
             src="{{ asset('storage') . '/pfp/' . $user->profile_pic }}"
             class=" w-1/6  rounded-full transition-all border-secu border-solid border-4"
-            alt="profile-pic">
-{{$user->name}}</a>
+            alt="profile-pic">{{$user->name}}</a>
         @endforeach
         @else
         <p class="text-info"></p>
