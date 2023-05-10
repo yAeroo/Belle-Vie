@@ -31,10 +31,10 @@
           <div class="uppercase text-white text-shadow font-bold text-lg pb-6">Reseñas</div>
 
             <div class="flex items-center px-4 py-4  bg-white">
-              <div class="w-1/3">
-                <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="imgPerfil">
-              </div>
               <div class="w-2/3">
+                <div class="w-1/5">
+                  <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="imgPerfil">
+                </div>
                 <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Gregorio Ramirez</div>
                 <p class="mt-2 p-2 text-slate-500">Emm, el rancho esta bueno we (texto relleno alv texto relleno alv texto relleno alv).</p>
               </div>
