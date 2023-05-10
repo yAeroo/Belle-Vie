@@ -18,3 +18,35 @@
 .text-shadow{
     text-shadow: 2px 2px 3px black ;
 }
+
+/**/
+
+.review-container {
+    width: 100%;
+  }
+  
+  .review-avatar {
+    background-color: #d1d5db;
+  }
+  
+  .review-name {
+    color: #4b5563;
+  }
+  
+  .review-text {
+    line-height: 1.5;
+  }
+  
+  .review-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc(100% - 16px);
+  }
+  
+  @media (max-width: 640px) {
+    .review-details {
+      flex-direction: column;
+    }
+  }
+  
