@@ -32,10 +32,12 @@
 
             <div class="flex items-center px-4 py-4  bg-white">
               <div class="w-2/3">
-                <div class="w-1/5">
-                  <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="imgPerfil">
+                <div class="flex place-items-center">
+                  <div class="w-1/1">
+                    <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="imgPerfil">
+                  </div>
+                  <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold ml-3">Gregorio Ramirez</div>
                 </div>
-                <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Gregorio Ramirez</div>
                 <p class="mt-2 p-2 text-slate-500">Emm, el rancho esta bueno we (texto relleno alv texto relleno alv texto relleno alv).</p>
               </div>
             </div>
@@ -47,6 +49,26 @@
               <div class="w-2/3">
                 <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold">Gregorio Ramirez</div>
                 <p class="mt-2 p-2 text-slate-500">Emm, el rancho esta bueno we (texto relleno alv texto relleno alv texto relleno alv).</p>
+              </div>
+            </div>
+
+            <div class="flex px-4 py-4 mt-6 bg-white mx-auto">
+              <div class="w-1/6">
+                <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="ImgPerfil">
+              </div>
+              <div class="w-2/3">
+                <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold ml-3">Gregorio Ramirez</div>
+                <p class="mt-2 p-2 text-slate-500 ml-1 text-md tracking-normal">Emm, el rancho esta bueno we (texto relleno alv texto relleno alv texto relleno alv).</p>
+              </div>
+            </div>
+
+            <div class="flex px-4 py-4 mt-6 bg-white mx-auto">
+              <div class="w-1/6">
+                <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('img/example.png') }}" alt="ImgPerfil">
+              </div>
+              <div class="w-2/3">
+                <div class="uppercase tracking-wide text-lg  text-[#e95f4a]  font-semibold ml-3">Gregorio Ramirez</div>
+                <p class="mt-2 p-2 text-slate-500 ml-1 text-sm tracking-normal">Emm, el rancho esta bueno we (texto relleno alv texto relleno alv texto relleno alv).</p>
               </div>
             </div>
 
