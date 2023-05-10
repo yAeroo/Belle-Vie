@@ -52,3 +52,6 @@ Route::get('/showPlace', [placeController::class, 'index'])->name('place');
 
 // --=== Página de Pago ===--
 Route::get('/pay', [PayController::class, 'index'])->name('pay');
+
+// --=== Página de Admin ===--
+Route::get('/index/admin', [AdminController::class, 'index'])->name('admin');
