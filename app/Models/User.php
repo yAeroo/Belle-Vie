@@ -51,7 +51,14 @@ class User extends Authenticatable
 
     // Relaciones
     public function place(): HasMany{
-
         return $this->hasMany(Place::class);
+    }
+
+    public function request(): HasMany{
+        return $this->hasMany(Request::class);
+    }
+
+    public function review(): HasMany{
+        return $this->hasMany(Review::class);
     }
 }

@@ -1,0 +1,5 @@
+*
+
+# Archivos ignorados
+!.gitignore
+!example-place.jpg

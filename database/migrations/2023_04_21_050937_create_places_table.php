@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('places', function (Blueprint $table) {
             $table->id();
             $table->foreignId('owner_id')->constrained('users')->onDelete('cascade');
-            $table->string('place_name', 20);
-            $table->string('description', 50);
+            $table->string('place_name', 50);
+            $table->string('description', 500);
+            $table->string('location', 100);
             $table->double('price', 8, 2);
             $table->string('img', 30);
             $table->boolean('availability');

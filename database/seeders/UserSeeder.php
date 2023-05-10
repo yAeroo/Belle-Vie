@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
         $Aero->phone_number = '';
         $Aero->password = Hash::make('1234');
         $Aero->gender = 'M';
-        $Aero->type = 'user';
+        $Aero->type = 'owner';
         $Aero->profile_pic = 'aero.jpg';
         $Aero->save();
 
