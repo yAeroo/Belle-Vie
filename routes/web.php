@@ -48,8 +48,14 @@ Route::get('/index/search', [SearchController::class, 'index'])->name('search');
 
 // --=== Ranchos ===--
 Route::get('/place/{place:id}', [placeController::class, 'index'])->name('place.index'); // <=== Visualizar un rancho
+Route::get('/places/{user:username}', [placeController::class, 'indexList'])->name('place.list'); // <=== Visualizar lista de ranchos
+Route::get('/place/{place:id}/edit', [placeController::class, 'placeEdit'])->name('place.edit'); // <=== Edición de rancho
+Route::post('/place/{place:id}/edit/store', [placeController::class, 'placeEditStore'])->name('place.edit.store'); // <=== Guardando cambios
+
 Route::get('new/place', [placeController::class, 'newIndex'])->name('place.new'); // <=== Página para nuevo rancho   
-Route::post('new/place/store', [placeController::class, 'store'])->name('place.store'); // <=== Guardando nuevo rancho  
+Route::post('new/place/store', [placeController::class, 'store'])->name('place.store'); // <=== Guardando nuevo rancho 
+
+Route::delete('/place/{place:id}/destroy', [placeController::class, 'destroy'])->name('place.destroy'); // <=== Eliminando rancho
 
 // --=== Página de Pago ===--
 Route::get('/pay', [PayController::class, 'index'])->name('pay');

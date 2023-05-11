@@ -1,5 +1,4 @@
 @extends('layout.AppLayout') @section('title') Nuevo rancho @endsection
-@section('css') @vite('resources/css/file-input.css') @endsection
 
 @section('content')
 <x-navbar />

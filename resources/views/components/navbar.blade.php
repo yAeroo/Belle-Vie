@@ -15,9 +15,11 @@
                 <li>
                     <a class="hover:text-gray-200 " href="#">Propiedades</a>
                 </li>
+                @if (auth()->user()->type == 'owner')
                 <li>
-                    <a  class="hover:text-gray-200 " href="#">Mis propiedades</a>
+                    <a  class="hover:text-gray-200 " href="{{ route('place.list', auth()->user()) }}">Mis propiedades</a>
                 </li>
+                @endif
                 <li>
                     <a  class="hover:text-gray-200 " href="{{ route('profile', auth()->user()) }}">Perfil</a>
                 </li>
