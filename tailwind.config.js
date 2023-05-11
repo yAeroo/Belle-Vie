@@ -6,6 +6,11 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
+    screens: {
+      'xs': '475px',
+
+    },
+
     extend: {
       fontFamily:{
         body: ["'Poppins', sans-serif"],
