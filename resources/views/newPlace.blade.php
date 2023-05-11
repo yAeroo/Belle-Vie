@@ -30,7 +30,7 @@
 
         <div class="input-edit flex-col flex justify-center py-5 px-10">
             <p class="font-bold text-md scroll-smooth text-secu divide-solid">Precio:</p>
-            <input type="number" name="price" class="session-input text-sm" step=".01"> 
+            <input type="number" name="price" class="session-input text-sm" step=".01" placeholder="$23.00"> 
         </div>
 
         <div class="input-edit flex-col flex justify-center py-5 px-10">

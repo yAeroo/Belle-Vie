@@ -22,7 +22,9 @@
         <div class="tracking-wide text-center text-2xl  text-[#e95f4a]">{{ $place->place_name }}</div>
     </div>
 
-    <x-errors />
+    <div class="px-10">
+        <x-errors />
+    </div>
 
     <form action="{{ route('place.edit.store', $place) }}" method="POST" enctype='multipart/form-data' class="p-5" id="editPlace">
         @csrf
@@ -41,7 +43,7 @@
 
         <div class="input-edit flex-col flex justify-center py-5 px-5">
             <p class="font-bold text-md scroll-smooth text-secu divide-solid">Precio:</p>
-            <input type="number" name="price" class="session-input text-sm" step=".01" placeholder="{{ sprintf('%0.2f', $place->price) }}"> 
+            <input type="number" name="price" class="session-input text-sm" step=".01" placeholder="${{ sprintf('%0.2f', $place->price) }}"> 
         </div>
 
         <div class="input-edit flex-col flex justify-center py-5 px-5">

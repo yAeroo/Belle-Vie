@@ -22,7 +22,11 @@
       <div class="p-8 flex flex-col items-center justify-center font-semibold">
         <div class="tracking-wide text-center text-2xl  text-[#e95f4a]">{{ $place->place_name }}</div>
         <p class="mt-3 p-2 text-slate-500 text-justify">{{ $place->description }}</p>
-        <button class="bg-prim mt-4 text-white py-2 px-2 rounded-lg focus:outline-none transition duration-300 ease-in-out">Reservar Rancho</button>
+        @if ($place->owner_id == auth()->user()->id)
+          <a href="{{ route('place.edit', $place) }}" class="bg-prim mt-4 text-white py-2 px-2 rounded-lg focus:outline-none transition duration-300 ease-in-out">Editar rancho</a>
+        @else
+          <a class="bg-prim mt-4 text-white py-2 px-2 rounded-lg focus:outline-none transition duration-300 ease-in-out">Reservar Rancho</a>
+        @endif
       </div>
   
       <hr class="border-t border-gray-300 my-8">

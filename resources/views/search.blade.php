@@ -3,7 +3,7 @@
 @section('content')
 <x-navbar />
 
-        <div class="col-md-4   h-screen place-items-center">
+        <div class="col-md-4 p-10 h-screen place-items-center">
             @livewire('counter')
         </div>
 
