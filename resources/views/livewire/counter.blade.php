@@ -7,7 +7,7 @@
         </div>
     </form><br>
     </div>
-<div class="relative">
+<div class="">
     <ul class="list-group">
         @if($users && $users->count() > 0)
             @foreach($users as $user)
