@@ -62,5 +62,17 @@ class UserSeeder extends Seeder
         $johny->gender = 'M';
         $johny->type = 'user';
         $johny->save();
+
+        // Usuario #5
+        $mone = new User();
+        $mone->username = 'mone';
+        $mone->name = 'Monardo';
+        $mone->last_name = 'Arjona';
+        $mone->email = 'mone@gmail.com';
+        $mone->phone_number = '';
+        $mone->password = Hash::make('1234');
+        $mone->gender = 'M';
+        $mone->type = 'owner';
+        $mone->save();
     }
 }

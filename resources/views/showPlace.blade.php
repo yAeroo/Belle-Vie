@@ -48,17 +48,37 @@
             </form>
           @endif
 
-            @foreach ($reviews as $review)
+            @if ($reviews->count() != 0)
+              @foreach ($reviews as $review)
               <div class="flex px-5 py-6 mt-6 bg-white mx-auto">
                 <div class="w-12 absolute">
                   <img class="h-23 object-cover md:w-48 rounded-full" src="{{ asset('storage') . '/pfp/' . $review->getUser($review->user_id)->profile_pic }}" alt="ImgPerfil">
                 </div>
                 <div class="w-3/1 ml-12">
                   <div class=" tracking-wide text-lg text-[#e95f4a] font-semibold ml-3">{{ Str::title($review->getUser($review->user_id)->username) }} | {{ Str::title($review->getUser($review->user_id)->name).' '.Str::title($review->getUser($review->user_id)->last_name)}}</div>
-                  <p class=" p-2 text-slate-500 ml-1 text-md tracking-wide text-left">{{ $review->review }}</p>
+                  <p class=" p-2 text-slate-500 ml-1 mb-2 text-md tracking-wide text-left">{{ $review->review }}</p>
+                  
+                  @if ($review->user_id == auth()->user()->id)
+                    <form action="{{ route('review.destroy', ['review' => $review]) }}" method="POST">
+                      @method('DELETE')
+                      @csrf
+                      <button class="bg-prim mt-10 px-5 text-white py-2 basis-0 text-sm rounded-lg focus:outline-none transition flex duration-300 ease-in-out items-center justify-center"><x-icon name="trash" /> Eliminar</button>
+                    </form>
+                  @endif
+
                 </div>
               </div>
             @endforeach
+            @else
+              <div class="content flex items-center justify-center pt-10">
+                <div class="mt-2 mb-5 leading-3">
+                    <span class="flex justify-center items-center"><x-icon variant='solid' name='chat-bubble-bottom-center-text' color='white'/></span>
+                    <h1 class='font-title text-white text-2xl font-bold mb-5 anim2 text-center'>
+                        Todavía no hay reseñas disponibles
+                    </h1>
+                </div>
+            </div>
+            @endif
 
           </div>
         </div>

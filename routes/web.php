@@ -61,7 +61,7 @@ Route::delete('/place/{place:id}/destroy', [placeController::class, 'destroy'])-
 
 // --=== Reseñas ===--
 Route::post('/place/{place:id}/review', [ReviewController::class, 'store'])->name('review.store'); // <=== Guardando reseña 
-Route::delete('/place/{place:id}/review/delete', [ReviewController::class, 'destroy'])->name('review.destroy'); // <=== Eliminando reseña 
+Route::delete('/review/{review:id}/delete', [ReviewController::class, 'destroy'])->name('review.destroy'); // <=== Eliminando reseña 
 
 // --=== Página de Pago ===--
 Route::get('/pay', [PayController::class, 'index'])->name('pay');

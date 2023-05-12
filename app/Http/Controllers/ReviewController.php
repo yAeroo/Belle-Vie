@@ -27,4 +27,10 @@ class ReviewController extends Controller
 
         return redirect()->back()->with('success', $success);
     }
+
+    public function destroy(Place $place, Review $review){
+        $review->delete();
+        $success = true;
+        return redirect()->back()->with('success', $success);
+    }
 }
