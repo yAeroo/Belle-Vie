@@ -20,4 +20,10 @@ class Review extends Model
     public function user(): BelongsTo{
         return $this->belongsTo(User::class);
     }
+
+    public function getUser($userId){
+        $user = User::where('id', $userId)->first();
+
+        return $user;
+    }
 }

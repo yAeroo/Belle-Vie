@@ -11,6 +11,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\placeController;
 use App\Http\Controllers\PayController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,7 @@ Route::get('/index/search', [SearchController::class, 'index'])->name('search');
 
 // --=== Ranchos ===--
 Route::get('/place/{place:id}', [placeController::class, 'index'])->name('place.index'); // <=== Visualizar un rancho
+Route::get('/places/', [placeController::class, 'placeList'])->name('place.list.index'); // <=== Visualizar todos los ranchos
 Route::get('/places/{user:username}', [placeController::class, 'indexList'])->name('place.list'); // <=== Visualizar lista de ranchos
 Route::get('/place/{place:id}/edit', [placeController::class, 'placeEdit'])->name('place.edit'); // <=== Edición de rancho
 Route::post('/place/{place:id}/edit/store', [placeController::class, 'placeEditStore'])->name('place.edit.store'); // <=== Guardando cambios
@@ -56,6 +58,10 @@ Route::get('new/place', [placeController::class, 'newIndex'])->name('place.new')
 Route::post('new/place/store', [placeController::class, 'store'])->name('place.store'); // <=== Guardando nuevo rancho 
 
 Route::delete('/place/{place:id}/destroy', [placeController::class, 'destroy'])->name('place.destroy'); // <=== Eliminando rancho
+
+// --=== Reseñas ===--
+Route::post('/place/{place:id}/review', [ReviewController::class, 'store'])->name('review.store'); // <=== Guardando reseña 
+Route::delete('/place/{place:id}/review/delete', [ReviewController::class, 'destroy'])->name('review.destroy'); // <=== Eliminando reseña 
 
 // --=== Página de Pago ===--
 Route::get('/pay', [PayController::class, 'index'])->name('pay');

@@ -24,6 +24,13 @@
     @yield('content') {{-- Campo para agregar el propio contenido para la vista --}}
 
     <x-footer /> {{-- Componente que renderiza el footer de la página --}}
+
+    <script>
+        AOS.init({
+        duration: 1000, // duración de la animación (en milisegundos)
+        offset: 200, // offset desde el borde superior de la ventana (en píxeles)
+      });
+    </script>
 </body>
 
 </html>

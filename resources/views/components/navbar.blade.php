@@ -13,7 +13,7 @@
                     <a class="hover:text-gray-200" href="{{ route('index') }}">Inicio</a>
                 </li>
                 <li>
-                    <a class="hover:text-gray-200 " href="#">Propiedades</a>
+                    <a class="hover:text-gray-200 " href="{{ route('place.list.index') }}">Propiedades</a>
                 </li>
                 @if (auth()->user()->type == 'owner')
                 <li>

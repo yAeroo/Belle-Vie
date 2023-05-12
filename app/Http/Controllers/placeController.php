@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Place;
+use App\Models\Review;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -18,13 +19,23 @@ class placeController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(User $user, Place $place){
+    public function index(Place $place, User $user){
 
         $user = User::where('id', $place->owner_id)->first();
+        $reviews = Review::where('place_id', $place->id)->get();
         
         return view('showPlace', [
             'user' => $user, 'user_fn' => $user->name." ".$user->last_name,
-            'place' => $place
+            'place' => $place,
+            'reviews' => $reviews
+        ]);
+    }
+
+    public function placeList(User $user){
+        $places = Place::all();
+        
+        return view('placesList', [
+            'places' => $places 
         ]);
     }
 
@@ -106,7 +117,7 @@ class placeController extends Controller
             'img' => $newImage,
         ]);
 
-        return redirect()->back();
+        return redirect(route('profile', $user));
     }
 
     public function placeEditStore(Place $place ,Request $request){

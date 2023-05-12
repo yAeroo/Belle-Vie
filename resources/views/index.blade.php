@@ -1,35 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio | Belle Vie</title>
-    @vite('resources/css/app.css')
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+@extends('layout.AppLayout') @section('title') Inicio @endsection
 
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#ECF0F1]">
-    
+@section('content')
 <x-navbar />
-
 <br>    
 
 <section class="relative z-0">
     <div class="max-w-2xl mx-auto relative z-0">
         <div id="default-carousel" class="relative z-0" data-carousel="static">
             <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+                @foreach ($placesSlide as $place2)
                 <div class="hidden duration-700 ease-in-out md:z-0" data-carousel-item>
                     <span class="relative top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl md:z-0">Primer Slide</span>
-                    <img src="{{ asset('img/Rancho2.jpg') }}" class="block relative top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 md:z-0" alt="...">
+                    <img src="{{ asset('storage') . '/place/' . $place2->img }}" class="block relative top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 md:z-0" alt="...">
                 </div>    
-                <div class="hidden duration-700 ease-in-out md:z-0" data-carousel-item>
-                    <img src="{{ asset('img/Rancho1.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 md:z-0" alt="...">
-                </div>    
-                <div class="hidden duration-700 ease-in-out md:z-0" data-carousel-item>
-                    <img src="{{ asset('img/Rancho2.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 md:z-0" alt="...">
-                </div>
+                @endforeach
             </div>
             <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2 md:z-0">
                 <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
@@ -59,43 +43,24 @@
 
     <h2 class="text-2xl font-bold tracking-tight text-[#E95F4A] flex items-center justify-center">Recientemente Agregados</h2>
     <br>
-    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-        <div class="md:flex">
-            <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho1.jpg') }}" alt="Modern building architecture">
-            </div>
-            <div class="p-8">
-                <div class="uppercase tracking-wide text-sm  text-[#050505]  font-semibold">Rancho en Lomas Altas</div>
-                <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis illo eius libero commodi enim error inventore labore. Quasi explicabo nisi labore voluptate quam eaque officia, ipsam, sed, ad illum laudantium!</p>
-                <button type="button" class="bg-[#E95F4A] text-white p-2 rounded-lg  hover:bg-white hover:text-black  hover:border-gray-300 ">Información</button>
-            </div>
-            
-        </div>
-    </div>
     
-    <br>
-
-    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-        <div class="md:flex">
-            <div class="md:shrink-0">
-            <img class="h-48 w-full object-cover md:h-full md:w-48" src="{{ asset('img/Rancho2.jpg') }}" alt="Modern building architecture">
+    <div class="px-12">
+        @foreach ($places as $place)
+        <section class="bg-[url('{{ asset('storage') . '/place/' . $place->img }}')] bg-cover bg-center h-60 my-5 py-4 md:px-0 text-center relative rounded-lg">
+            <div id="fade" class="max-w-md bg-white drop-shadow-lg overflow-hidden md:max-w-md gap-6 opacity-0 translate-x-5 transition duration-1000 aos-item absolute inset-x-0 bottom-5 sm:max-w-sm" data-aos="fade-left">
+                <div class="flex items-center justify-center px-2 py-2">
+                        <div class="w-2/3">
+                        <div class="uppercase tracking-wide text-lg  text-prim font-semibold">{{ $place->place_name }}</div>
+                        <div class="uppercase  font-semibold"> ${{ sprintf('%0.2f', $place->price) }}</div>
+                        <p class="font-title text-xl text-center font-bold tracking-wide transition-all flex justify-center items-center text-gray-500"> 
+                            <x-icon name='map-pin' variant='solid'/> {{ $place->location }}
+                        </p>
+                        <a href="{{ route('place.index', $place) }}" class=""><p class="mt-2 p-2 text-white rounded-lg bg-secu">Más información</p></a>
+                    </div>
+                </div>
             </div>
-            <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-[#050505] font-semibold">Rancho En Soyapango</div>
-                    <p class="mt-2 p-2 text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptate architecto nesciunt quo praesentium fuga molestias sint, et consectetur quod accusamus cumque harum placeat rem quia at, distinctio mollitia reprehenderit!</p>
-                    <button type="button" class="bg-[#E95F4A] text-white p-2 rounded-lg  hover:bg-white hover:text-black  hover:border-gray-300 ">Información</button>
-            </div>
-        </div>
+        </section>
+    @endforeach
     </div>
 
-    <br>
-
-    <hr><hr>
-    <h2 class="text-2xl font-bold tracking-tight text-[#E95F4A] flex items-center justify-center">Busca en tu área</h2>
-    <br>
-
-    <div class="max-w-md mx-auto md:max-w-2xl flex items-center justify-center  ">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496646.2348708033!2d-89.74153659042916!3d13.471095050096896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7ccdfa00775ee3%3A0xf25574d56eb5e13!2sRanchos%20de%20Playa%20MM.!5e0!3m2!1ses-419!2ssv!4v1682185261624!5m2!1ses-419!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</body>
-</html>
+@endsection

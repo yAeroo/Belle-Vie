@@ -84,6 +84,9 @@
                                                 <div class="w-2/3">
                                                 <div class="uppercase tracking-wide text-lg  text-prim font-semibold">{{ $place->place_name }}</div>
                                                 <div class="uppercase  font-semibold"> ${{ sprintf('%0.2f', $place->price) }}</div>
+                                                <p class="font-title text-xl text-center font-bold tracking-wide transition-all flex justify-center items-center text-gray-500"> 
+                                                    <x-icon name='map-pin' variant='solid'/> {{ $place->location }}
+                                                </p>
                                                 <a href="{{ route('place.index', $place) }}" class=""><p class="mt-2 p-2 text-white rounded-lg bg-secu">Más información</p></a>
                                             </div>
                                         </div>
