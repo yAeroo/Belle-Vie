@@ -7,46 +7,34 @@
         </div>
     </form><br>
     </div>
-    <div></div>
+<div class="relative">
     <ul class="list-group">
         @if($users && $users->count() > 0)
             @foreach($users as $user)
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center text-[#E95F4A] text-3xl text-center max-w-md mx-auto bg-white drop-shadow-lg rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 p-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center text-[#E95F4A] text-3xl text-center max-w-md mx-auto bg-white drop-shadow-lg rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 p-5 ">
                     <div class="sm:col-auto">
-                        <img src="{{ asset('storage/pfp/' . $user->profile_pic) }}" class="w-24 h-24 md:w-48 rounded-full transition-all border-secu border-solid border-4" alt="profile-pic">
+                        <img src="{{ asset('storage/pfp/' . $user->profile_pic) }}" class="mx-auto block  w-2/5 h-24 md:w-48 rounded-full  border-secu border-solid border-4" alt="profile-pic">
                     </div>
-                    <a class="list-group-item col-span-2 sm:col-auto text-left" href="{{ route('profile', $user) }}">
+                    <a class="list-group-item col-span-2 sm:col-auto texte-center" href="{{ route('profile', $user) }}">
                         {{$user->name}}
-                    </a>
-                    <p class="col-span-2 sm:col-auto text-slate-500 ml-1 text-md tracking-wide text-left"></p>
+                    </a>              
                 </div>
             @endforeach
-        @else
-            <p class="text-info"></p>
         @endif
 
         @if($places && $places->count() > 0)
             @foreach($places as $place)
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center text-[#E95F4A] text-3xl text-center max-w-md mx-auto bg-white drop-shadow-lg rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 p-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center text-[#E95F4A] text-3xl text-center max-w-md mx-auto bg-white drop-shadow-lg rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 p-5 ">
                     <div class="sm:col-auto">
-                        <img src="{{ asset('storage/place/' . $place->img) }}" class="w-24 h-24 md:w-48 rounded-full transition-all border-secu border-solid border-4" alt="profile-pic">
+                        <img src="{{ asset('storage/place/' . $place->img) }}" class="mx-auto block  w-2/5 h-24 md:w-48 rounded-full  border-secu border-solid border-4" alt="profile-pic">
                     </div>
-                    <a class="list-group-item col-span-2 sm:col-auto text-left" href="{{ route('place.index', $place) }}">
+                    <a class="list-group-item col-span-2 sm:col-auto text-center" href="{{ route('place.index', $place) }}">
                         {{$place->place_name}}
                     </a>
-                    <p class="col-span-2 sm:col-auto text-slate-500 ml-1 text-md tracking-wide text-left"></p>
                 </div>
             @endforeach
-        @else
-            <p class="text-info"></p>
         @endif
-
     </ul>
+</div>
 </div> 
-<script>
-    AOS.init({
-    duration: 1000, // duración de la animación (en milisegundos)
-    offset: 200, // offset desde el borde superior de la ventana (en píxeles)
-  });
-  </script>
 
