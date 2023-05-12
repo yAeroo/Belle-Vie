@@ -13,7 +13,7 @@
             @foreach($users as $user)
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center text-[#E95F4A] text-3xl text-center max-w-md mx-auto bg-white drop-shadow-lg rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 p-5 ">
                     <div class="sm:col-auto">
-                        <img src="{{ asset('storage/pfp/' . $user->profile_pic) }}" class="mx-auto block  w-2/5 h-24 md:w-48 rounded-full  border-secu border-solid border-4" alt="profile-pic">
+                        <img src="{{ asset('storage/pfp/' . $user->profile_pic) }}" class="mx-auto block w-22 h-24 md:w-48 rounded-full  border-secu border-solid border-4" alt="profile-pic">
                     </div>
                     <a class="list-group-item col-span-2 sm:col-auto texte-center" href="{{ route('profile', $user) }}">
                         {{$user->name}}
@@ -26,7 +26,7 @@
             @foreach($places as $place)
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center text-[#E95F4A] text-3xl text-center max-w-md mx-auto bg-white drop-shadow-lg rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 p-5 ">
                     <div class="sm:col-auto">
-                        <img src="{{ asset('storage/place/' . $place->img) }}" class="mx-auto block  w-2/5 h-24 md:w-48 rounded-full  border-secu border-solid border-4" alt="profile-pic">
+                        <img src="{{ asset('storage/place/' . $place->img) }}" class="mx-auto block w-22 h-24 md:w-48 rounded-full  border-secu border-solid border-4" alt="profile-pic">
                     </div>
                     <a class="list-group-item col-span-2 sm:col-auto text-center" href="{{ route('place.index', $place) }}">
                         {{$place->place_name}}
