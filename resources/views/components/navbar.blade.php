@@ -5,10 +5,15 @@
                 <img class="w-16 cursor-pointer mx-2 my-2" src="{{ asset('img/favicon.png') }}" alt="...">
             </a>
         </div>
+        
         <div
             class="nav-links ml-auto duration-500 md:static absolute bg-[#f87171] md:min-h-fit min-h-[15vh] 
             left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 py-5 z-10">
+
             <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-gray-50">
+                <li>
+                    <a class="hover:text-gray-200" href="{{ route('search') }}">Buscar</a>
+                </li>
                 <li>
                     <a class="hover:text-gray-200" href="{{ route('index') }}">Inicio</a>
                 </li>

@@ -19,8 +19,8 @@
     
 
       <div class="p-8 flex flex-col items-center justify-center font-semibold">
-        <div class="tracking-wide text-center text-2xl  text-[#e95f4a]">{{ $place->place_name }}</div>
-        <div class="tracking-wide text-center text-xl  text-black">${{ $place->price }}</div>
+        <div class="tracking-wide text-center text-2xl  py-1  text-[#e95f4a]">{{ $place->place_name }}</div>
+        <div class="tracking-wide text-center text-xl  py-1  text-black">${{ $place->price }}</div>
         <p class="font-title text-xl text-center font-bold tracking-wide transition-all flex text-gray-500"> 
             <x-icon name='map-pin' variant='solid'/> {{ $place->location }}
         </p>

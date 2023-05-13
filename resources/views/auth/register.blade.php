@@ -32,6 +32,10 @@
                     <div class="mt-5">  
                         <input type="text" placeholder="Correo electrónico" name="email" class="session-input w-full">
                     </div>
+                    
+                    {{-- <div class="mt-5">
+                        <input type="text" placeholder="Número de teléfono" name="phone_number"class="session-input w-full">
+                    </div> --}}
 
                     <div class="mt-5">
                         <input type="password" placeholder="Contraseña" name="password" class="session-input">
@@ -41,6 +45,7 @@
                         <input type="password" placeholder="Confirmar contraseña" name="password_confirmation"class="session-input w-full">
                     </div>
 
+                    
                     <div class="gender-container mt-5">
                         <label class="font-title font-bold text-xl">Género:</label>
 

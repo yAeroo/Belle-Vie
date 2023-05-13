@@ -37,6 +37,7 @@ class UserSeeder extends Seeder
         $vini->password = Hash::make('1234');
         $vini->gender = 'M';
         $vini->type = 'owner';
+        $vini->profile_pic = 'vinic.jpeg';
         $vini->save();
 
         // Usuario #3
@@ -49,6 +50,7 @@ class UserSeeder extends Seeder
         $flupa->password = Hash::make('1234');
         $flupa->gender = 'M';
         $flupa->type = 'user';
+        $flupa->profile_pic = 'flupa.jpeg';
         $flupa->save();
 
         // Usuario #4

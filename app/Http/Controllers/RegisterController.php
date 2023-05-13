@@ -20,7 +20,7 @@ class RegisterController extends Controller
             'name'=> 'required|alpha_dash:ascii|max:20|min:3',
             'last_name'=> 'required|alpha_dash:ascii|max:20|min:3',
             'email'=> 'bail|required|unique:users|email|max:30',
-            'phone_number'=> 'nullable|max:9',
+            'phone_number'=> 'nullable|numeric|max:8',
             'password'=> 'required|confirmed|max:30|min:4',
             'gender'=> 'required',
             'type'=> 'required',
